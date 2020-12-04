@@ -24,20 +24,70 @@ namespace Peregrine
 {
     namespace Logger
     {
+        /*
+         * Outputs a string with all the "{}" replaced with each element in `args` inside `format`.
+         * Use Format instead.
+         * 
+         * format - std::string which needs to be formatted.
+         * args - std::initializer_list containing format args.
+         * returns - a std::string with all the "{}" replaced with each element in `args` inside `format`.
+         */
+        std::string FormatBase(const std::string & format, std::initializer_list<std::string> args);
+        
+        /*
+         * Outputs a string with all the "{}" replaced with each element in `args` inside `format`.
+         * Use Format instead.
+         * 
+         * format - std::string which needs to be formatted.
+         * args - std::initializer_list containing format args.
+         * returns - a std::string with all the "{}" replaced with each element in `args` inside `format`.
+         */
         std::string FormatBase(std::string && format, std::initializer_list<std::string> args);
    
+        /*
+         * Coverts variable to std::string using operator<<.
+         * 
+         * t - variable to convert to string.
+         * returns - std::string version of variable according to the operator<<.
+         */
         template <typename Type>
-        std::string FormatArg(const Type & t)
+        std::string ToString(const Type & t)
         {
             std::stringstream out;
             out<<t;
             return std::move(out.str());
         }
-        
+  
+        /*
+         * Outputs a string with all the "{}" replaced with positional `args` inside `format`.
+         * 
+         * format - std::string which needs to be formatted.
+         * args - Argument pack of variables containing format args.
+         * returns - a std::string with all the "{}" replaced with `args` inside `format`.
+         */
+        template <typename... Args>
+        std::string Format(const std::string & format, Args... args)
+        {
+            return FormatBase(
+                format,                         // Pass the format string as is
+                {std::move(ToString(args))...} // Expand argument pack to create an std::initializer_list of std::string returned by ToString.
+            );
+        }
+
+        /*
+         * Outputs a string with all the "{}" replaced with positional `args` inside `format`.
+         * 
+         * format - std::tring which needs to be formatted.
+         * args - Argument pack of variables containing format args.
+         * returns - a std::string with all the "{}" replaced with `args` inside `format`.
+         */
         template <typename... Args>
         std::string Format(std::string && format, Args... args)
         {
-            return FormatBase(std::move(format), {std::move(FormatArg(args))...});
+            return FormatBase(
+                std::move(format),             // Pass the format string as is
+                {std::move(ToString(args))...} // Expand argument pack to create an std::initializer_list of std::string returned by ToString.
+            );
         }
     }
 }

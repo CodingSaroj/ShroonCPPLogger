@@ -24,17 +24,17 @@
 
 #ifdef DEBUG
     #if PG_LOG_LEVEL >= 1
-        #define PG_INFO(section, ...) Logger::LogInfo(section, Format(__VA_ARGS__))
+        #define PG_INFO(section, ...) Peregrine::Logger::LogInfo(section, Format(__VA_ARGS__))
     #endif
 
     #if PG_LOG_LEVEL >= 2
-        #define PG_WARNING(section, ...) Logger::LogWarning(section, Format(__VA_ARGS__))
+        #define PG_WARNING(section, ...) PeregrineLogger::LogWarning(section, Format(__VA_ARGS__))
     #endif
 
     #if PG_LOG_LEVEL == 3
-        #define PG_ERROR(section, ...) Logger::LogError(section, Format(__VA_ARGS__))
+        #define PG_ERROR(section, ...) Peregrine::Logger::LogError(section, Format(__VA_ARGS__))
 
-        #define PG_ASSERT(cond, section, ...) if (!(cond)) { Logger::LogFatalError(section, Format(__VA_ARGS__)); exit(2); }
+        #define PG_ASSERT(cond, section, ...) if (!(cond)) { Peregrine::Logger::LogFatalError(section, Format(__VA_ARGS__)); exit(2); }
     #endif
 #else
     #define PG_INFO(...)
@@ -44,10 +44,10 @@
     #define PG_ASSERT(cond, ...)
 #endif
 
-#define PG_REL_INFO(section, ...) Logger::LogInfo(section, Format(__VA_ARGS__))
-#define PG_REL_WARNING(section, ...) Logger::LogWarning(section, Format(__VA_ARGS__))
-#define PG_REL_ERROR(section, ...) Logger::LogError(section, Format(__VA_ARGS__))
-#define PG_REL_ASSERT(cond, section, ...) if (!(cond)) { Logger::LogFatalError(section, Format(__VA_ARGS__)); exit(2); }
+#define PG_REL_INFO(section, ...) Peregrine::Logger::LogInfo(section, Format(__VA_ARGS__))
+#define PG_REL_WARNING(section, ...) Peregrine::Logger::LogWarning(section, Format(__VA_ARGS__))
+#define PG_REL_ERROR(section, ...) Peregrine::Logger::LogError(section, Format(__VA_ARGS__))
+#define PG_REL_ASSERT(cond, section, ...) if (!(cond)) { Peregrine::Logger::LogFatalError(section, Format(__VA_ARGS__)); exit(2); }
 
 namespace Peregrine
 {

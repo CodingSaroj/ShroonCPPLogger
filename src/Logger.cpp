@@ -19,7 +19,15 @@ namespace Peregrine
 {
     namespace Logger
     {
-        std::ostream * s_Out = &std::cout;
+        // Use std::cout as default output stream.
+        static std::ostream * s_Out = &std::cout;
+
+        static double GetTimestamp()
+        {
+            auto now = std::chrono::system_clock::now();
+
+            return now.time_since_epoch().count();
+        }
         
         void SetOStream(std::ostream & out)
         {
@@ -30,26 +38,27 @@ namespace Peregrine
         {
             std::ostream & out = *s_Out;
 
-            out<<Format("{}Info{}::{}: {}\n", Colors::Blue | Colors::Bold, Colors::White, section, log);
+            out<<Format("[{}]{}Info{}::{}: {}\n", GetTimestamp(), Colors::Cyan | Colors::Bold, Colors::White, section, log);
         }
 
         void LogWarning(const std::string & section, const std::string & log)
         {
             std::ostream & out = *s_Out;
 
-            out<<Format("{}Warning{}::{}: {}\n", Colors::Yellow | Colors::Bold, Colors::White, section, log);
+            out<<Format("[{}]{}Warning{}::{}: {}\n", GetTimestamp(), Colors::Yellow | Colors::Bold, Colors::White, section, log);
         }
 
         void LogError(const std::string & section, const std::string & log)
         {
             std::ostream & out = *s_Out;
 
-            out<<Format("{}Error{}::{}: {}\n", Colors::Red | Colors::Bold, Colors::White, section, log);
+            out<<Format("[{}]{}Error{}::{}: {}\n", GetTimestamp(), Colors::Red | Colors::Bold, Colors::White, section, log);
         }
 
         void LogFatalError(const std::string & section, const std::string & log)
         {
-            std::cerr<<Format("{}Error{}::{}: {}\n", Colors::Red | Colors::Bold, Colors::White, section, log);
+            std::cerr<<Format("[{}]{}Error{}::{}: {}\n", GetTimestamp(), Colors::Red | Colors::Bold, Colors::White, section, log);
+            PG_DEBUG_BREAK();
         }
     }
 }

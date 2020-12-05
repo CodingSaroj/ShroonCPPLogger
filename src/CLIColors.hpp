@@ -17,48 +17,71 @@
 
 #include <iostream>
 
-#include <bitset>
+#include <cstdint>
 
 namespace Peregrine
 {
     namespace Colors
     {
-        class Format 
+        /*
+         * Wrapper for uint8_t, so operator<< doesn't override the
+         * default operator<< for uint8_t.
+         */
+        class ColorFmt
         {
         public:
-            inline Format(const std::bitset<7> & bitset)
-                : m_Base(bitset)
+            explicit inline ColorFmt(uint16_t fmt)
+                : m_Fmt(fmt)
             {
             }
 
-            inline Format(const std::string & bitset)
-                : m_Base(bitset)
+            uint16_t operator&(uint16_t mask) const
             {
+                return m_Fmt & mask;
             }
 
-            inline bool test(size_t index) const
+            ColorFmt operator&(ColorFmt mask) const
             {
-                return m_Base.test(index);
+                return ColorFmt(m_Fmt & mask.m_Fmt);
             }
 
-            Format operator|(Format fmt) const
+            uint16_t operator|(uint16_t mask) const
             {
-                return m_Base | fmt.m_Base;
+                return m_Fmt | mask;
+            }
+
+            ColorFmt operator|(ColorFmt mask) const
+            {
+                return ColorFmt(m_Fmt | mask.m_Fmt);
+            }
+
+            operator bool() const
+            {
+                return m_Fmt;
             }
 
         private:
-            std::bitset<7> m_Base;
+            const uint16_t m_Fmt;
         };
 
-        const Format Bold("0000001");
-        const Format Italic("0000010");
+        // Bold/Italic not available on Windows. Using it on Windows has no effects.
+        const ColorFmt Bold(0x1);
+        const ColorFmt Italic(0x2);
 
-        const Format White("0000100");
-        const Format Red("0001000");
-        const Format Blue("0010000");
-        const Format Green("0100000");
-        const Format Yellow("1000000");
+        /*
+         * Bitmasks for common color codes.
+         */
+        const ColorFmt White(0x4);
+        const ColorFmt Red(0x8);
+        const ColorFmt Green(0x10);
+        const ColorFmt Blue(0x20);
+        const ColorFmt Yellow(0x40);
+        const ColorFmt Cyan(0x80);
+        const ColorFmt Pink(0x100);
 
-        std::ostream & operator<<(std::ostream & out, const Format & fmt);
+        /*
+         * operator<< so, you can pass it into an std::ostream to set text color.
+         */
+        std::ostream & operator<<(std::ostream & out, const ColorFmt & fmt);
     }
 }

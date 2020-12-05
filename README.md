@@ -1,3 +1,5 @@
+<img src="logos/peregrine256x256.png">
+
 # PeregrineCPPLogger
 
 A simple logging library written in C++17.

@@ -1,9 +1,3 @@
-<img src="logos/peregrine256x256.png">
-
-# PeregrineCPPLogger
-
-A simple logging library written in C++17.
-
 # Building
 
 Make sure you have [CMake 3.14+](https://cmake.org) installed on your system.
@@ -49,7 +43,11 @@ The library "should" work fine on MacOS. Currently, I have no way to test the bu
 because I do not have a Mac. So, any help on that is welcome.
 
 
-The libraries should be inside `lib/<config>/<os_name>/<architecture>/` where  
+## Output location
+
+The library will be inside `lib/<config>/<os_name>/<architecture>/` where  
 * `<config>` is Release by default. Refer to [this](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html) for possible values for `<config>`.
 * `<os_name>` is the name of your Operating System. Example - `Windows`, `Linux` etc.
 * `<architecture>` is the architecture of your CPU. Example - `x86`,`x86_64` etc.
+
+If you built the example then the binary will be inside `example/bin/` inside the project root.

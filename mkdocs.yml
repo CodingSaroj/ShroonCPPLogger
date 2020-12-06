@@ -1,0 +1,8 @@
+site_name: PeregrineCPPLogger Docs
+theme: readthedocs
+nav:
+    - 'index.md'
+    - 'GettingStarted.md'
+    - 'Building.md'
+    - 'FormattingStyle.md'
+    - 'APIReference.md'

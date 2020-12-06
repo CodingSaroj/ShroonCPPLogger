@@ -21,27 +21,7 @@ namespace Peregrine
     {
         std::string FormatBase(const std::string & format, std::initializer_list<std::string> args)
         {
-            std::string formatted(format);
-
-            // Find the first '{'
-            size_t lastMatch = format.find('{', 0);
-        
-            for (auto & arg : args)
-            {
-                // If '{' isn't found in format
-                if (lastMatch == std::string::npos)
-                {
-                    break;
-                }
-
-                // Replace "{}"
-                formatted.replace(lastMatch, 2, arg);
-
-                // Find the next '{'
-                lastMatch = formatted.find('{', lastMatch);
-            }
-        
-            return formatted;
+            return FormatBase(std::string(format), args);
         }
 
         std::string FormatBase(std::string && format, std::initializer_list<std::string> args)
@@ -51,14 +31,140 @@ namespace Peregrine
         
             for (auto & arg : args)
             {
+                std::string argStr(arg);
+
                 // If '{' isn't found in format
                 if (lastMatch == std::string::npos)
                 {
                     break;
                 }
 
-                // Replace "{}"
-                format.replace(lastMatch, 2, arg);
+                std::vector<std::string> flags;
+
+                std::string currentFlag;
+
+                size_t sizeToReplace = 2;
+
+                // Collect flags
+                for (size_t i = lastMatch + 1; format[i] != '}'; i++)
+                {
+                    // Flags are seperated by ':' e.g. {x:wi8} will set width to 8 and output in hex
+                    if (format[i] == ':')
+                    {
+                        flags.emplace_back(currentFlag);
+                        currentFlag.clear();
+                    }
+                    else
+                    {
+                        currentFlag += format[i];
+                    }
+
+                    // If next character is '}'
+                    if (format[i + 1] == '}')
+                    {
+                        flags.emplace_back(currentFlag);
+                        currentFlag.clear();
+
+                        sizeToReplace = (i - lastMatch) + 2;
+                    }
+                }
+
+                // Processing the flags
+                for (auto & flag : flags)
+                {
+                    if (flag == "b")
+                    {
+                        // Format: {b}
+                        // Equivalent of std::boolalpha
+                        bool argBool = strtoul(argStr.c_str(), nullptr, 10);
+                        argStr = argBool ? "true" : "false";
+                    }
+                    else if (flag == "o")
+                    {
+                        // Format: {o}
+                        // Equivalent of std::oct
+                        uint64_t argDec = strtoul(argStr.c_str(), nullptr, 10);
+                        argStr = ToString(argDec, std::oct);
+                    }
+                    else if (flag == "x")
+                    {
+                        // Format: {x}
+                        // Equivalent of std::dec
+                        uint64_t argDec = strtoul(argStr.c_str(), nullptr, 10);
+                        argStr = ToString(argDec, std::hex);
+                    }
+                    else if (flag == "f")
+                    {
+                        // Format: {f}
+                        // Equivalent of std::fixed
+                        double argFlt = strtod(argStr.c_str(), nullptr);
+                        argStr = ToString(argFlt, std::fixed);
+                    }
+                    else if (flag[0] == 'w')
+                    {
+                        uint32_t width = strtoul(&flag[2], nullptr, 10);
+
+                        if (flag[1] == 'l')
+                        {
+                            // Format: {wl<width>}
+                            // Add leading spaces to arg to match width.
+                            if (argStr.size() < width)
+                            {
+                                argStr.insert(argStr.begin(), width - argStr.size(), ' ');
+                            }
+                        }
+                        else if (flag[1] == 't')
+                        {
+                            // Format: {wt<width>}
+                            // Add trailing spaces to arg to match width.
+                            if (argStr.size() < width)
+                            {
+                                argStr.insert(argStr.end(), width - argStr.size(), ' ');
+                            }
+                        }
+                        else if (flag[1] == 'c')
+                        {
+                            // Format: {wm<width>}
+                            // Centralises arg by adding leading and trailing spaces to match width.
+                            if (argStr.size() < width)
+                            {
+                                size_t numSpaces = width - argStr.size();
+                                size_t numLeadingSpaces = 0, numTrailingSpaces = 0;
+                                
+                                if (numSpaces % 2)
+                                {
+                                    numLeadingSpaces = numSpaces - 1 / 2;
+                                    numTrailingSpaces = (numSpaces + 1) / 2;
+                                }
+                                else
+                                {
+                                    numLeadingSpaces = numSpaces / 2;
+                                    numTrailingSpaces = numLeadingSpaces;
+                                }
+
+                                argStr.insert(argStr.begin(), numLeadingSpaces, ' ');
+                                argStr.insert(argStr.end(), numTrailingSpaces, ' ');
+                            }
+                        }
+                        else if (flag[1] == 'i')
+                        {
+                            // Format: {wi<width>}
+                            // Equivalent of std::setw(width)<<std::setfill('0').
+                            uint64_t argNum = strtoul(argStr.c_str(), nullptr, 10);
+                            argStr = ToString(argNum, std::setw(width), std::setfill('0'));
+                        }
+                        else if (flag[1] == 'f')
+                        {
+                            // Format: {wf<width>}
+                            // Equivalent of std::setprecision(width)<<std::fixed.
+                            double argNum = strtod(argStr.c_str(), nullptr);
+                            argStr = ToString(argNum, std::setprecision(width), std::fixed);
+                        }
+                    }
+                }
+
+                // Replace "{...}"
+                format.replace(lastMatch, sizeToReplace, argStr);
 
                 // Find the next '{'
                 lastMatch = format.find('{', lastMatch);

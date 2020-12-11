@@ -21,9 +21,17 @@ if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Release")
 endif()
 
+if (NOT PG_OUTPUT_INCLUDE_DIR)
+    set(PG_OUTPUT_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
+endif()
+
+if (NOT PG_OUTPUT_LIBRARY_DIR)
+    set(PG_OUTPUT_LIBRARY_DIR "${PROJECT_SOURCE_DIR}/lib")
+endif()
+
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/lib/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PG_OUTPUT_LIBRARY_DIR}/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
 
 file(GLOB_RECURSE SRC_FILES "${PROJECT_SOURCE_DIR}/src/*.hpp" "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
@@ -31,16 +39,15 @@ add_library(PeregrineCPPLogger ${SRC_FILES})
 target_include_directories(PeregrineCPPLogger PUBLIC "${PROJECT_SOURCE_DIR}/src/")
 
 file(GLOB_RECURSE HEADER_FILES "${PROJECT_SOURCE_DIR}/src/*.hpp")
-file(MAKE_DIRECTORY "${PROJECT_SOURCE_DIR}/include/Peregrine")
-file(MAKE_DIRECTORY "${PROJECT_SOURCE_DIR}/include/Peregrine/Logger/")
-file(COPY ${HEADER_FILES} DESTINATION "${PROJECT_SOURCE_DIR}/include/Peregrine/Logger/")
+file(MAKE_DIRECTORY "${PG_OUTPUT_INCLUDE_DIR}/Peregrine/Logger/")
+file(COPY ${HEADER_FILES} DESTINATION "${PG_OUTPUT_INCLUDE_DIR}/Peregrine/Logger/")
 
 if (${PG_CPP_LOG_BUILD_EXAMPLE})
     message(STATUS "Build example: ON")
     add_executable(Example "example/main.cpp")
     set_target_properties(Example PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/example/bin/")
-    target_include_directories(Example PUBLIC "${PROJECT_SOURCE_DIR}/include/")
-    target_link_directories(Example PUBLIC "${PROJECT_SOURCE_DIR}/lib/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
+    target_include_directories(Example PUBLIC "${PG_OUTPUT_INCLUDE_DIR}")
+    target_link_directories(Example PUBLIC "${PG_OUTPUT_LIBRARY_DIR}/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
     target_link_libraries(Example PUBLIC "PeregrineCPPLogger")
 else()
     message(STATUS "Build example: OFF")

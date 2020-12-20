@@ -1,0 +1,7 @@
+# Development files
+.clangd
+compile_commands.json
+
+# Build output
+build
+lib

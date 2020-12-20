@@ -21,34 +21,63 @@ if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Release")
 endif()
 
-if (NOT PG_OUTPUT_INCLUDE_DIR)
-    set(PG_OUTPUT_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
-endif()
-
-if (NOT PG_OUTPUT_LIBRARY_DIR)
-    set(PG_OUTPUT_LIBRARY_DIR "${PROJECT_SOURCE_DIR}/lib")
-endif()
-
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PG_OUTPUT_LIBRARY_DIR}/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
+set(PGIncludeDir "${PROJECT_SOURCE_DIR}/include")
+set(PGLibraryDir "${PROJECT_SOURCE_DIR}/lib/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
 
 file(GLOB_RECURSE SRC_FILES "${PROJECT_SOURCE_DIR}/src/*.hpp" "${PROJECT_SOURCE_DIR}/src/*.cpp")
+file(GLOB_RECURSE HEADER_FILES "${PROJECT_SOURCE_DIR}/src/*.hpp")
+
+file(MAKE_DIRECTORY "${PGIncludeDir}/Peregrine/Logger/")
+file(COPY ${HEADER_FILES} DESTINATION "${PGIncludeDir}/Peregrine/Logger/")
 
 add_library(PeregrineCPPLogger ${SRC_FILES})
+
+set_target_properties(PeregrineCPPLogger PROPERTIES
+    VERSION 1.0.0
+    ARCHIVE_OUTPUT_DIRECTORY ${PGLibraryDir}
+    LIBRARY_OUTPUT_DIRECTORY ${PGLibraryDir}
+)
+
 target_include_directories(PeregrineCPPLogger PUBLIC "${PROJECT_SOURCE_DIR}/src/")
 
-file(GLOB_RECURSE HEADER_FILES "${PROJECT_SOURCE_DIR}/src/*.hpp")
-file(MAKE_DIRECTORY "${PG_OUTPUT_INCLUDE_DIR}/Peregrine/Logger/")
-file(COPY ${HEADER_FILES} DESTINATION "${PG_OUTPUT_INCLUDE_DIR}/Peregrine/Logger/")
+install(
+    TARGETS PeregrineCPPLogger EXPORT PeregrineCPPLoggerTargets
+    ARCHIVE DESTINATION ${PGLibraryDir}
+    LIBRARY DESTINATION ${PGLibraryDir}
+)
+
+include(CMakePackageConfigHelpers)
+
+write_basic_package_version_file(
+    "${PROJECT_SOURCE_DIR}/cmake/PeregrineCPPLoggerConfigVersion.cmake"
+    VERSION 1.0.0
+    COMPATIBILITY AnyNewerVersion
+)
+
+export(
+    EXPORT PeregrineCPPLoggerTargets
+    NAMESPACE PeregrineCPPLogger::
+    FILE "${PROJECT_SOURCE_DIR}/cmake/PeregrineCPPLoggerTargets.cmake"
+)
 
 if (${PG_CPP_LOG_BUILD_EXAMPLE})
     message(STATUS "Build example: ON")
+
     add_executable(Example "example/main.cpp")
-    set_target_properties(Example PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/example/bin/")
-    target_include_directories(Example PUBLIC "${PG_OUTPUT_INCLUDE_DIR}")
-    target_link_directories(Example PUBLIC "${PG_OUTPUT_LIBRARY_DIR}/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
-    target_link_libraries(Example PUBLIC "PeregrineCPPLogger")
+
+    set_target_properties(Example PROPERTIES
+        VERSION 1.0.0
+        RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/example/bin/"
+    )
+
+    target_include_directories(Example PUBLIC "${PGIncludeDir}")
+    target_link_directories(Example PUBLIC "${PGLibraryDir}/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
+    target_link_libraries(Example PUBLIC PeregrineCPPLogger)
 else()
     message(STATUS "Build example: OFF")
 endif()
+
+unset(PGIncludeDir)
+unset(PGLibraryDir)

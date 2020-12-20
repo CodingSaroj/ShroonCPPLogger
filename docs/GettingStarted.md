@@ -108,7 +108,7 @@ Then, there is a string formatting test:
 `"{...}"` indicates a replacable token with `...` inside `{}` as formatting flags in the format string.
 Refer to [Formatting Style](/FormattingStyle) for more info.
 
-Then, there are test for various logging macros:
+Then, there are tests for various logging macros:
 
 ```c++
     PG_INFO("Example", "{} is working.", "PG_INFO");

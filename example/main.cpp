@@ -12,11 +12,13 @@ int main()
 #endif
 
     // String formatting test.
+    std::cout<<"String formatting is working.\n";
     std::cout<<Peregrine::Logger::Format(
-R"(String formatting is working.
-|{wc10}|{wc10}|{wf6:wc10}|{x:wc10}|
-)",                                     // Format string
-        "String", 3456, 3.456, 0xbaba   // Format args
+        // Format string
+        "|{wc10}|{wc10}|{wf6:wc10}|{x:wc10}|\n",
+
+        // Format args
+        "String", 3456, 3.456, 0xbaba
     );
 
     PG_INFO("Example", "{} is working.", "PG_INFO");
@@ -27,6 +29,6 @@ R"(String formatting is working.
     PG_REL_WARNING("Example", "{} is working.", "PG_REL_WARNING");
     PG_REL_ERROR("Example", "{} is working.", "PG_REL_ERROR");
 
-    PG_REL_ASSERT(false, "{} is working", "PG_REL_ASSERT");
-    PG_ASSERT(false, "{} is working", "PG_ASSERT");
+    PG_REL_ASSERT(false, "Example", "{} is working.", "PG_REL_ASSERT");
+    PG_ASSERT(false, "Example", "{} is working.", "PG_ASSERT");
 }

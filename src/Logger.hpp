@@ -108,31 +108,32 @@ namespace Peregrine
         /*
          * Set the std::ostream to log to. It is std::cout by default for
          * info, warnings and errors. Assertions are always written to std::cerr. 
+         *
          * out - std::ostream & where all the logs will go.
          */
         void SetOStream(std::ostream & out);
 
         /*
          * Logs data to the output stream in the format:
-         *      (Bold|Cyan)Info(White)::<section>: <log>\n
+         *      (Green)[<time_since_app_started_in_ms>](Bold|Cyan)Info(White)::<section>: <log>\n
          */
         void LogInfo(const std::string & section, const std::string & log);
 
         /*
          * Logs data to the output stream in the format:
-         *      (Bold|Yellow)Warning(White)::<section>: <log>\n
+         *      (Green)[<time_since_app_started_in_ms>](Bold|Yellow)Warning(White)::<section>: <log>\n
          */
         void LogWarning(const std::string & section, const std::string & log);
 
         /*
          * Logs data to the output stream in the format:
-         *      (Bold|Red)Error(White)::<section>: <log>\n
+         *      (Green)[<time_since_app_started_in_ms>](Bold|Red)Error(White)::<section>: <log>\n
          */
         void LogError(const std::string & section, const std::string & log);
 
         /*
-         * Logs data to the std::cerr in the format and causes a debug break:
-         *      (Bold|Red)Error(White)::<section>: <log>\n
+         * Logs data to the std::cerr in the format below and causes a debug break:
+         *      (Green)[<time_since_app_started_in_ms>](Bold|Red)Error(White)::<section>: <log>\n
          */
         void LogFatalError(const std::string & section, const std::string & log);
     }

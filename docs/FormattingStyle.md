@@ -119,6 +119,8 @@ Format: `{wf<width>}`
 
 Example: `Format("{wf4}", 20)` will return `"20.0000"`.
 
+## Combinations
+
 All these flags can be combined to achieve behaviour unachievable
 by using them individually.
 

@@ -40,26 +40,26 @@ namespace Peregrine
         {
             std::ostream & out = *s_Out;
 
-            out<<Format("{}[{}]{}Info::{}: {}{}\n", Colors::Green, GetTimestamp(), Colors::Cyan | Colors::Bold, section, log, Colors::White);
+            out<<Format("{}[{}]{}Info::{}: {}{}\n", TextFormat::Green, GetTimestamp(), TextFormat::Cyan | TextFormat::Bold, section, log, TextFormat::White);
         }
 
         void LogWarning(const std::string & section, const std::string & log)
         {
             std::ostream & out = *s_Out;
 
-            out<<Format("{}[{}]{}Warning::{}: {}{}\n", Colors::Green, GetTimestamp(), Colors::Yellow | Colors::Bold, section, log, Colors::White);
+            out<<Format("{}[{}]{}Warning::{}: {}{}\n", TextFormat::Green, GetTimestamp(), TextFormat::Yellow | TextFormat::Bold, section, log, TextFormat::White);
         }
 
         void LogError(const std::string & section, const std::string & log)
         {
             std::ostream & out = *s_Out;
 
-            out<<Format("{}[{}]{}Error::{}: {}{}\n", Colors::Green, GetTimestamp(), Colors::Red | Colors::Bold, section, log, Colors::White);
+            out<<Format("{}[{}]{}Error::{}: {}{}\n", TextFormat::Green, GetTimestamp(), TextFormat::Red | TextFormat::Bold, section, log, TextFormat::White);
         }
 
         void LogFatalError(const std::string & section, const std::string & log)
         {
-            std::cerr<<Format("{}[{}]{}Error::{}: {}{}\n", Colors::Green, GetTimestamp(), Colors::Red | Colors::Bold, section, log, Colors::White);
+            std::cerr<<Format("{}[{}]{}Error::{}: {}{}\n", TextFormat::Green, GetTimestamp(), TextFormat::Red | TextFormat::Bold, section, log, TextFormat::White);
             PG_DEBUG_BREAK();
         }
     }

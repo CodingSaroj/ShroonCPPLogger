@@ -21,9 +21,9 @@
 
 namespace Peregrine
 {
-    namespace Colors
+    namespace Logger
     {
-        std::ostream & operator<<(std::ostream & out, const ColorFmt & fmt)
+        std::ostream & operator<<(std::ostream & out, const TextFormat & fmt)
         {
             // If on Windows use the Win32 library.
             #if defined(_WIN32)
@@ -31,31 +31,31 @@ namespace Peregrine
 
                 // Win32 Console doesn't support bold/italic
 
-                if (fmt & White)
+                if (fmt &  TextFormat::White)
                 {
                     SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
                 }
-                else if (fmt & Red)
+                else if (fmt & TextFormat::Red)
                 {
                     SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED);
                 }
-                else if (fmt & Green)
+                else if (fmt & TextFormat::Green)
                 {
                     SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_GREEN);
                 }
-                else if (fmt & Blue)
+                else if (fmt & TextFormat::Blue)
                 {
                     SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_BLUE);
                 }
-                else if (fmt & Yellow)
+                else if (fmt & TextFormat::Yellow)
                 {
                     SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN);
                 }
-                else if (fmt & Cyan)
+                else if (fmt & TextFormat::Cyan)
                 {
                     SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
                 }
-                else if (fmt & Pink)
+                else if (fmt & TextFormat::Pink)
                 {
                     SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_BLUE);
                 }
@@ -67,40 +67,40 @@ namespace Peregrine
 
                 out.write("\033[0;", 4);
 
-                if (fmt & Bold)
+                if (fmt & TextFormat::Bold)
                 {
                     out.write("1;", 2);
                 }
-                else if (fmt & Italic)
+                else if (fmt & TextFormat::Italic)
                 {
                     out.write("3;", 2);
                 }
 
-                if (fmt & White)
+                if (fmt & TextFormat::White)
                 {
                     out.write("0", 1);
                 }
-                else if (fmt & Red)
+                else if (fmt & TextFormat::Red)
                 {
                     out.write("31", 2);
                 }
-                else if (fmt & Green)
+                else if (fmt & TextFormat::Green)
                 {
                     out.write("32", 2);
                 }
-                else if (fmt & Blue)
+                else if (fmt & TextFormat::Blue)
                 {
                     out.write("34", 2);
                 }
-                else if (fmt & Yellow)
+                else if (fmt & TextFormat::Yellow)
                 {
                     out.write("33", 2);
                 }
-                else if (fmt & Cyan)
+                else if (fmt & TextFormat::Cyan)
                 {
                     out.write("36", 2);
                 }
-                else if (fmt & Pink)
+                else if (fmt & TextFormat::Pink)
                 {
                     out.write("35", 2);
                 }

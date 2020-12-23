@@ -15,43 +15,58 @@
  */
 #pragma once
 
-#include <functional>
 #include <iomanip>
 #include <iostream>
 
 #include <sstream>
 #include <string>
 
+/**
+ * @brief The namespace in which all the projects under Peregrine exist.
+ */
 namespace Peregrine
 {
+    /**
+     * @brief The namespace in which all the PeregrineCPPLogger API other than macros exists.
+     */
     namespace Logger
     {
-        /*
-         * Outputs a string with all the "{}" replaced with each element in `args` inside `format`.
-         * Use Format instead.
+        /**
+         * @defgroup FormatFunctions
+         * This group consists of all the functions used for formatting.
+         * @{
+         */
+
+        /**
+         * @brief Outputs a string with all the "{}" replaced with each element in \p args inside \p format.
          * 
-         * format - std::string which needs to be formatted.
-         * args - std::initializer_list containing format args.
-         * returns - a std::string with all the "{}" replaced with each element in `args` inside `format`.
+         * @param format An <tt>const std::string &</tt> which needs to be formatted.
+         * @param args An \p std::initializer_list containing format args.
+         *
+         * @return An \p std::string with all the "{}" replaced with each element in \p args inside \p format.
          */
         std::string FormatBase(const std::string & format, std::initializer_list<std::string> args);
         
-        /*
-         * Outputs a string with all the "{}" replaced with each element in `args` inside `format`.
-         * Use Format instead.
+        /**
+         * @brief Outputs an \p std::string with all the "{}" replaced with each element in \p args inside \p format.
          * 
-         * format - std::string which needs to be formatted.
-         * args - std::initializer_list containing format args.
-         * returns - a std::string with all the "{}" replaced with each element in `args` inside `format`.
+         * @param format An <tt>std::string &&</tt> which needs to be formatted.
+         * @param args An \p std::initializer_list containing format args.
+         *
+         * @return An \p std::string with all the "{}" replaced with each element in \p args inside \p format.
          */
         std::string FormatBase(std::string && format, std::initializer_list<std::string> args);
-   
-        /*
-         * Coverts variable to std::string using operator<<.
+
+        /**
+         * @brief Converts variable of type \p Type to \p std::string using \p operator<<.
          * 
-         * t - variable to convert to string.
-         * flags - flags to pass to stream before variable.
-         * returns - std::string version of variable according to the operator<<.
+         * @tparam Type Type of variable which will be converted.
+         * @tparam IOSFlagTypes A parameter pack of types of functors which will be passed to \p operator<<.
+         *
+         * @param t Variable to convert to string.
+         * @param flags Flags to pass to stream before variable.
+         * 
+         * @return An \p std::string version of variable according to the \p operator<<.
          */
         template <typename Type, typename... IOSFlagTypes>
         inline std::string ToString(const Type & t, IOSFlagTypes... flags)
@@ -62,12 +77,13 @@ namespace Peregrine
             return std::move(out.str());
         }
   
-        /*
-         * Outputs a string with all the "{}" replaced with positional `args` inside `format`.
+        /**
+         * @brief Outputs a string with all the "{}" replaced with positional `args` inside `format`.
          * 
-         * format - std::string which needs to be formatted.
-         * args - Argument pack of variables containing format args.
-         * returns - a std::string with all the "{}" replaced with `args` inside `format`.
+         * @param format - An `std::string` which needs to be formatted.
+         * @param args - Argument pack of variables containing format args.
+         * 
+         * @return - An `std::string` with all the "{}" replaced with `args` inside `format`.
          */
         template <typename... Args>
         std::string Format(const std::string & format, Args... args)
@@ -78,12 +94,13 @@ namespace Peregrine
             );
         }
 
-        /*
-         * Outputs a string with all the "{}" replaced with positional `args` inside `format`.
+        /**
+         * @brief Outputs a string with all the "{}" replaced with positional `args` inside `format`.
          * 
-         * format - std::tring which needs to be formatted.
-         * args - Argument pack of variables containing format args.
-         * returns - a std::string with all the "{}" replaced with `args` inside `format`.
+         * @param format An \p std::tring which needs to be formatted.
+         * @param args Argument pack of variables containing format args.
+         * 
+         * @return An \p std::string with all the "{}" replaced with \p args inside \p format.
          */
         template <typename... Args>
         std::string Format(std::string && format, Args... args)
@@ -95,5 +112,9 @@ namespace Peregrine
                 {std::move(ToString(args))...}  // Expand argument pack to create an std::initializer_list of std::string returned by ToString.
             );
         }
+
+        /**
+         * @}
+         */
     }
 }

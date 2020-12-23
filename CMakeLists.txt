@@ -62,7 +62,7 @@ export(
     FILE "${PROJECT_SOURCE_DIR}/cmake/PeregrineCPPLoggerTargets.cmake"
 )
 
-if (${PG_CPP_LOG_BUILD_EXAMPLE})
+if (${PG_CPP_LOGGER_BUILD_EXAMPLE})
     message(STATUS "Build example: ON")
 
     add_executable(Example "example/main.cpp")
@@ -78,6 +78,21 @@ if (${PG_CPP_LOG_BUILD_EXAMPLE})
 else()
     message(STATUS "Build example: OFF")
 endif()
+
+if (${PG_CPP_LOGGER_BUILD_DOCS})
+    message(STATUS "Build docs: ON")
+
+    add_custom_target(
+      docs ALL
+      COMMAND "doxygen"
+      WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+      COMMENT "Generating API documentation with Doxygen"
+    )
+
+else()
+    message(STATUS "Build docs: OFF")
+endif()
+
 
 unset(PGIncludeDir)
 unset(PGLibraryDir)

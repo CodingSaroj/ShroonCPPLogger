@@ -45,14 +45,14 @@ unset(_expectedTargets)
 add_library(PeregrineCPPLogger::PeregrineCPPLogger STATIC IMPORTED)
 
 set_target_properties(PeregrineCPPLogger::PeregrineCPPLogger PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/saroj/workspace/PeregrineParserGenerator/external/PeregrineCPPLogger/src/"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/saroj/workspace/PeregrineCPPLogger/src/"
 )
 
-# Import target "PeregrineCPPLogger::PeregrineCPPLogger" for configuration "Debug"
-set_property(TARGET PeregrineCPPLogger::PeregrineCPPLogger APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+# Import target "PeregrineCPPLogger::PeregrineCPPLogger" for configuration "Release"
+set_property(TARGET PeregrineCPPLogger::PeregrineCPPLogger APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(PeregrineCPPLogger::PeregrineCPPLogger PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "/home/saroj/workspace/PeregrineParserGenerator/external/PeregrineCPPLogger/lib/Debug/Linux/x86_64/libPeregrineCPPLogger.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/home/saroj/workspace/PeregrineCPPLogger/lib/Release/Linux/x86_64/libPeregrineCPPLogger.a"
   )
 
 # This file does not depend on other imported targets which have

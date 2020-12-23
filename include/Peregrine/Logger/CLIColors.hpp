@@ -19,69 +19,122 @@
 
 #include <cstdint>
 
+/**
+ * @brief The namespace in which all the projects under Peregrine exist.
+ */
 namespace Peregrine
 {
-    namespace Colors
+    /**
+     * @brief The namespace in which all the PeregrineCPPLogger API other than macros exists.
+     */
+    namespace Logger
     {
-        /*
-         * Wrapper for uint8_t, so operator<< doesn't override the
-         * default operator<< for uint8_t.
+        /**
+         * @defgroup TextFormatting
+         * This group consists of functions and classes used in the process of stylizing(color,bold & italic) text.
+         * @{
          */
-        class ColorFmt
+
+        /**
+         * @brief Wrapper for \p uint8_t, so \p operator<< doesn't override the
+         * default \p operator<< for \p uint8_t.
+         */
+        class TextFormat
         {
         public:
-            explicit inline ColorFmt(uint16_t fmt)
-                : m_Fmt(fmt)
-            {
-            }
+            /**
+             * @defgroup TextFormatFlags
+             * @ingroup TextFormatting
+             * This group contains all possible values for \p TextFormat.
+             * @{
+             */
 
-            uint16_t operator&(uint16_t mask) const
+            /**
+             * @brief Enum containing values for different text format flags.
+             */
+            enum FormatFlags : uint16_t
             {
-                return m_Fmt & mask;
-            }
+                Bold    = 0x0001,   ///< @brief Changes the style of stream output to be bold. This doesn't work on Windows.
+                Italic  = 0x0002,   ///< @brief Changes the style of stream output to be italic. This doesn't work on Windows.
 
-            ColorFmt operator&(ColorFmt mask) const
-            {
-                return ColorFmt(m_Fmt & mask.m_Fmt);
-            }
+                White   = 0x0004,   ///< @brief Changes the color of stream output to be white.
+                Red     = 0x0008,   ///< @brief Changes the color of stream output to be red.
+                Green   = 0x0010,   ///< @brief Changes the color of stream output to be green.
+                Blue    = 0x0020,   ///< @brief Changes the color of stream output to be blue.
+                Yellow  = 0x0040,   ///< @brief Changes the color of stream output to be yellow.
+                Cyan    = 0x0080,   ///< @brief Changes the color of stream output to be cyan.
+                Pink    = 0x0100    ///< @brief Changes the color of stream output to be pink.
+            };
+            /**
+             * @}
+             */
 
-            uint16_t operator|(uint16_t mask) const
-            {
-                return m_Fmt | mask;
-            }
+            /**
+             * @brief Constructs a \p TextFormat with format as \p fmt.
+             *
+             * @param fmt The format this \p TextFormat will contain.
+             */
+            TextFormat(uint16_t fmt) : m_Fmt(fmt) {}
 
-            ColorFmt operator|(ColorFmt mask) const
-            {
-                return ColorFmt(m_Fmt | mask.m_Fmt);
-            }
+            /**
+             * @brief "and"s the format with \p mask.
+             *
+             * @param mask The mask to use.
+             *
+             * @return The result of "and".
+             */
+            uint16_t operator&(uint16_t mask) const { return m_Fmt & mask; }
 
-            operator bool() const
-            {
-                return m_Fmt;
-            }
+            /**
+             * @brief "and"s the format with \p mask.
+             *
+             * @param mask The mask to use.
+             *
+             * @return The result of "and".
+             */
+            TextFormat operator&(TextFormat mask) const { return TextFormat(m_Fmt & mask.m_Fmt); }
+
+            /**
+             * @brief "or"s the format with \p mask.
+             *
+             * @param mask The mask to use.
+             *
+             * @return The result of "or".
+             */
+            uint16_t operator|(uint16_t mask) const { return m_Fmt | mask; }
+
+            /**
+             * @brief "or"s the format with \p mask.
+             *
+             * @param mask The mask to use.
+             *
+             * @return The result of "or".
+             */
+            TextFormat operator|(TextFormat mask) const { return TextFormat(m_Fmt | mask.m_Fmt); }
+
+            /**
+             * @brief Checks if the format is non-zero.
+             *
+             * @return A \p bool which is \p true when format is non-zero, \p false otherwise.
+             */
+            operator bool() const { return m_Fmt; }
 
         private:
-            const uint16_t m_Fmt;
+            uint16_t m_Fmt;
         };
 
-        // Bold/Italic not available on Windows. Using it on Windows has no effects.
-        const ColorFmt Bold(0x1);
-        const ColorFmt Italic(0x2);
-
-        /*
-         * Bitmasks for common color codes.
+        /**
+         * @brief \p operator<< so \p TextFormat can be passed into an \p std::ostream to set text color.
+         *
+         * @param out The \p std::ostream to which the \p fmt will be applied.
+         * @param fmt The \p TextFormat to apply to \p out.
+         *
+         * @return \p out with \p fmt applied.
          */
-        const ColorFmt White(0x4);
-        const ColorFmt Red(0x8);
-        const ColorFmt Green(0x10);
-        const ColorFmt Blue(0x20);
-        const ColorFmt Yellow(0x40);
-        const ColorFmt Cyan(0x80);
-        const ColorFmt Pink(0x100);
+        std::ostream & operator<<(std::ostream & out, const TextFormat & fmt);
 
-        /*
-         * operator<< so, you can pass it into an std::ostream to set text color.
+        /**
+         * @}
          */
-        std::ostream & operator<<(std::ostream & out, const ColorFmt & fmt);
     }
 }

@@ -1,0 +1,5 @@
+<map id="LoggingMacros" name="LoggingMacros">
+<area shape="rect" id="node1" title="This group consists of all the macros used for logging." alt="" coords="5,31,125,56"/>
+<area shape="rect" id="node2" href="$group__DebugLoggingMacros.html" title="This group consists of all the macros used for logging only in debug mode." alt="" coords="178,5,341,31"/>
+<area shape="rect" id="node3" href="$group__ReleaseLoggingMacros.html" title="This group consists of all the macros used for logging in both debug and release mode." alt="" coords="173,55,345,80"/>
+</map>

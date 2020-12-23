@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__LogLevel" kind="group">
+    <compoundname>LogLevel</compoundname>
+    <title>LogLevel</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__LogLevel_1ga34479ce7fd8b296a48e0ed8f4909edd9" prot="public" static="no">
+        <name>PG_LOG_LEVEL_INFO</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>Allows logs of level Info, Warning and Error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/LogLevels.hpp" line="25" column="9" bodyfile="src/LogLevels.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LogLevel_1gaad2bcbd1c9d9a6a26e6e5c402aada287" prot="public" static="no">
+        <name>PG_LOG_LEVEL_WARNING</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Allows logs of level Warning and Error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/LogLevels.hpp" line="26" column="9" bodyfile="src/LogLevels.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LogLevel_1gaddb2e6e148de63f723301f2d1a3be296" prot="public" static="no">
+        <name>PG_LOG_LEVEL_ERROR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Allows logs of level Error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/LogLevels.hpp" line="27" column="9" bodyfile="src/LogLevels.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LogLevel_1ga74340620d69f3b0e33ab22477ca8b213" prot="public" static="no">
+        <name>PG_LOG_LEVEL_NO_LOG</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Doesn&apos;t allow any logs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/LogLevels.hpp" line="28" column="9" bodyfile="src/LogLevels.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This group contains all possible values for <computeroutput>PG_LOG_LEVEL</computeroutput>. The default value is PG_LOG_LEVEL_INFO i.e. 3. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

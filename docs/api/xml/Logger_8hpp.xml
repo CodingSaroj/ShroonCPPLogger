@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="Logger_8hpp" kind="file" language="C++">
+    <compoundname>Logger.hpp</compoundname>
+    <includes local="no">chrono</includes>
+    <includes local="no">csignal</includes>
+    <includes refid="CLIColors_8hpp" local="yes">CLIColors.hpp</includes>
+    <includes refid="StringFormat_8hpp" local="yes">StringFormat.hpp</includes>
+    <includes refid="LogLevels_8hpp" local="yes">LogLevels.hpp</includes>
+    <includedby refid="Logger_8cpp" local="yes">src/Logger.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>iomanip</label>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>src/Logger.hpp</label>
+        <link refid="Logger_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>StringFormat.hpp</label>
+        <link refid="StringFormat_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>CLIColors.hpp</label>
+        <link refid="CLIColors_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>chrono</label>
+      </node>
+      <node id="3">
+        <label>csignal</label>
+      </node>
+      <node id="12">
+        <label>LogLevels.hpp</label>
+        <link refid="LogLevels_8hpp"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/Logger.hpp</label>
+        <link refid="Logger_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/Logger.cpp</label>
+        <link refid="Logger_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacePeregrine">Peregrine</innernamespace>
+    <innernamespace refid="namespacePeregrine_1_1Logger">Peregrine::Logger</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" prot="public" static="no">
+        <name>PG_DEBUG_BREAK</name>
+        <param></param>
+        <initializer>raise(SIGABRT);</initializer>
+        <briefdescription>
+<para>Causes a debug break. Does <computeroutput>__debugbreak()</computeroutput> on MSVC, <computeroutput>raise(SIGTRAP)</computeroutput> on systems where <computeroutput>SIGTRAP</computeroutput> is defined and <computeroutput>raise(SIGABRT)</computeroutput> where it isn&apos;t. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="40" column="13" bodyfile="src/Logger.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga2fd1fd9fef3b7e267261c8fd1c825e75" prot="public" static="no">
+        <name>PG_INFO</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="59" column="17" bodyfile="src/Logger.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gab84c05f86f8f35f0f7e3c2689d07a4fd" prot="public" static="no">
+        <name>PG_WARNING</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="69" column="17" bodyfile="src/Logger.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga042fa3f79256fdf9939ff996507476aa" prot="public" static="no">
+        <name>PG_ERROR</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="79" column="17" bodyfile="src/Logger.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga88e7b470c2599c8677c9f53fa0bd4690" prot="public" static="no">
+        <name>PG_ASSERT</name>
+        <param><defname>cond</defname></param>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="85" column="17" bodyfile="src/Logger.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga5de83acc860b956760863900f7979b30" prot="public" static="no">
+        <name>PG_REL_INFO</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="115" column="13" bodyfile="src/Logger.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1gace89a6174c7de1a4059a45db9d3c0004" prot="public" static="no">
+        <name>PG_REL_WARNING</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="125" column="13" bodyfile="src/Logger.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga1380f65dcae1a6dc775fbcf728b7eb95" prot="public" static="no">
+        <name>PG_REL_ERROR</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="135" column="13" bodyfile="src/Logger.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1gae41fd449f2add14de11c1ba3000c7cc0" prot="public" static="no">
+        <name>PG_REL_ASSERT</name>
+        <param><defname>cond</defname></param>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="141" column="13" bodyfile="src/Logger.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2020<sp/>Saroj<sp/>Kumar.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;csignal&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CLIColors_8hpp" kindref="compound">CLIColors.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="StringFormat_8hpp" kindref="compound">StringFormat.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="LogLevels_8hpp" kindref="compound">LogLevels.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>default<sp/>log<sp/>level<sp/>if<sp/>none<sp/>is<sp/>defined.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PG_LOG_LEVEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>log<sp/>level<sp/>as<sp/>Info.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_LOG_LEVEL<sp/>PG_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_DEBUG_BREAK()<sp/>__debugbreak();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(SIGTRAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_DEBUG_BREAK()<sp/>raise(SIGTRAP);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_DEBUG_BREAK()<sp/>raise(SIGABRT);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Debug<sp/>mode<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>at<sp/>Info<sp/>then<sp/>define<sp/>PG_INFO.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="group__DebugLoggingMacros_1ga2fd1fd9fef3b7e267261c8fd1c825e75" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_INFO(section,<sp/>...)<sp/>Peregrine::Logger::LogInfo(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Warning<sp/>then<sp/>define<sp/>PG_WARNING.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_WARNING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="group__DebugLoggingMacros_1gab84c05f86f8f35f0f7e3c2689d07a4fd" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_WARNING(section,<sp/>...)<sp/>Peregrine::Logger::LogWarning(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Error<sp/>then<sp/>define<sp/>PG_ERROR<sp/>and<sp/>PG_ASSERT.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_ERROR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="group__DebugLoggingMacros_1ga042fa3f79256fdf9939ff996507476aa" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_ERROR(section,<sp/>...)<sp/>Peregrine::Logger::LogError(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="group__DebugLoggingMacros_1ga88e7b470c2599c8677c9f53fa0bd4690" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_ASSERT(cond,<sp/>section,<sp/>...)<sp/>if<sp/>(!(cond))<sp/>{<sp/>Peregrine::Logger::LogFatalError(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_ASSERT(...)<sp/>PG_DEBUG_BREAK();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>define<sp/>non-release<sp/>macros<sp/>in<sp/>Release<sp/>mode.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_ASSERT(...)<sp/>PG_DEBUG_BREAK();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Release<sp/>mode<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Info<sp/>then<sp/>define<sp/>PG_REL_INFO.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="group__ReleaseLoggingMacros_1ga5de83acc860b956760863900f7979b30" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_INFO(section,<sp/>...)<sp/>Peregrine::Logger::LogInfo(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Warning<sp/>then<sp/>define<sp/>PG_REL_WARNING.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_WARNING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="group__ReleaseLoggingMacros_1gace89a6174c7de1a4059a45db9d3c0004" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_WARNING(section,<sp/>...)<sp/>Peregrine::Logger::LogWarning(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>to<sp/>Error<sp/>then<sp/>define<sp/>PG_REL_ERROR<sp/>and<sp/>PG_REL_ASSERT.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_ERROR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="group__ReleaseLoggingMacros_1ga1380f65dcae1a6dc775fbcf728b7eb95" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_ERROR(section,<sp/>...)<sp/>Peregrine::Logger::LogError(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="group__ReleaseLoggingMacros_1gae41fd449f2add14de11c1ba3000c7cc0" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_ASSERT(cond,<sp/>section,<sp/>...)<sp/>if<sp/>(!(cond))<sp/>{<sp/>Peregrine::Logger::LogFatalError(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_ASSERT(...)<sp/>PG_DEBUG_BREAK()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacePeregrine" kindref="compound">Peregrine</ref></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Logger</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacePeregrine_1_1Logger_1a56fdad18de42922ddac917e53df7eb13" kindref="member">SetOStream</ref>(std::ostream<sp/>&amp;<sp/>out);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">LogInfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">LogWarning</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">LogError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">LogFatalError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Logger.hpp"/>
+  </compounddef>
+</doxygen>

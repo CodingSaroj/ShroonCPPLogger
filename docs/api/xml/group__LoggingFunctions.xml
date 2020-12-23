@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__LoggingFunctions" kind="group">
+    <compoundname>LoggingFunctions</compoundname>
+    <title>LoggingFunctions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Peregrine::Logger::LogInfo</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogInfo</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Info</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Cyan)Info(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="39" column="14" bodyfile="src/Logger.cpp" bodystart="39" bodyend="44" declfile="src/Logger.hpp" declline="184" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Peregrine::Logger::LogWarning</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogWarning</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Warning</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Yellow)Warning(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="46" column="14" bodyfile="src/Logger.cpp" bodystart="46" bodyend="51" declfile="src/Logger.hpp" declline="193" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Peregrine::Logger::LogError</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Error</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Red)Error(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="53" column="14" bodyfile="src/Logger.cpp" bodystart="53" bodyend="58" declfile="src/Logger.hpp" declline="202" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Peregrine::Logger::LogFatalError</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogFatalError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Error</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Red)Error(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput><linebreak/>
+</para>
+</blockquote>and performs a <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="60" column="14" bodyfile="src/Logger.cpp" bodystart="60" bodyend="64" declfile="src/Logger.hpp" declline="212" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This group consists of all the functions used for logging. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

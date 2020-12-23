@@ -1,4 +1,4 @@
-<img src="logos/peregrine256x256.png">
+<img src="logos/PergrineCPPLogger256x256.png">
 
 # PeregrineCPPLogger
 

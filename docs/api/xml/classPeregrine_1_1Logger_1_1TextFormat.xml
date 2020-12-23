@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classPeregrine_1_1Logger_1_1TextFormat" kind="class" language="C++" prot="public">
+    <compoundname>Peregrine::Logger::TextFormat</compoundname>
+    <includes refid="CLIColors_8hpp" local="no">CLIColors.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="group__TextFormatFlags_1gac76971ef4921f810f39823f9ac08eba2" prot="public" static="no" strong="no">
+        <type>uint16_t</type>
+        <name>FormatFlags</name>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac910eace793d3cabfcbf712465aedc40" prot="public">
+          <name>Bold</name>
+          <initializer>= 0x0001</initializer>
+          <briefdescription>
+<para>Changes the style of stream output to be bold. This doesn&apos;t work on Windows. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afb5d4184b939231d22ea925cc1b18afa" prot="public">
+          <name>Italic</name>
+          <initializer>= 0x0002</initializer>
+          <briefdescription>
+<para>Changes the style of stream output to be italic. This doesn&apos;t work on Windows. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ae90fbea2f47e6a792e5bf0aac4d25270" prot="public">
+          <name>White</name>
+          <initializer>= 0x0004</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be white. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a6b67ed3df23c0c8a8814ddbd1cfaf2b4" prot="public">
+          <name>Red</name>
+          <initializer>= 0x0008</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be red. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a382db0af9255a78d440fda5c2dc6a744" prot="public">
+          <name>Green</name>
+          <initializer>= 0x0010</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be green. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ab6205151f7aa0d3b6ed6081b6a166e2a" prot="public">
+          <name>Blue</name>
+          <initializer>= 0x0020</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be blue. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afd4b7d7b06b8c236242ade88910cc901" prot="public">
+          <name>Yellow</name>
+          <initializer>= 0x0040</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be yellow. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac40f888ed6ae37678efad3d7c5a8dd87" prot="public">
+          <name>Cyan</name>
+          <initializer>= 0x0080</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be cyan. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a4bba5ca30901a71b91ff20edf8533afd" prot="public">
+          <name>Pink</name>
+          <initializer>= 0x0100</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be pink. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing values for different text format flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="56" column="1" bodyfile="src/CLIColors.hpp" bodystart="55" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPeregrine_1_1Logger_1_1TextFormat_1aeb80d81352119558ace82ad5d0087bee" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Peregrine::Logger::TextFormat::m_Fmt</definition>
+        <argsstring></argsstring>
+        <name>m_Fmt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="123" column="22" bodyfile="src/CLIColors.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPeregrine_1_1Logger_1_1TextFormat_1a2c404e1921990acee64fd066173beffc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Peregrine::Logger::TextFormat::TextFormat</definition>
+        <argsstring>(uint16_t fmt)</argsstring>
+        <name>TextFormat</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>fmt</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <computeroutput><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></computeroutput> with format as <computeroutput>fmt</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format this <computeroutput><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></computeroutput> will contain. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="77" column="13" bodyfile="src/CLIColors.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classPeregrine_1_1Logger_1_1TextFormat_1a451d8e336822fff3860f053cb1e48be2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Peregrine::Logger::TextFormat::operator&amp;</definition>
+        <argsstring>(uint16_t mask) const</argsstring>
+        <name>operator&amp;</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>&quot;and&quot;s the format with <computeroutput>mask</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mask to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of &quot;and&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="86" column="22" bodyfile="src/CLIColors.hpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classPeregrine_1_1Logger_1_1TextFormat_1a4fa77fb4cab65ce5882f1190c3302d98" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></type>
+        <definition>TextFormat Peregrine::Logger::TextFormat::operator&amp;</definition>
+        <argsstring>(TextFormat mask) const</argsstring>
+        <name>operator&amp;</name>
+        <param>
+          <type><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>&quot;and&quot;s the format with <computeroutput>mask</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mask to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of &quot;and&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="95" column="24" bodyfile="src/CLIColors.hpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classPeregrine_1_1Logger_1_1TextFormat_1a1028a7217d5953a8c5f8687a020cd96b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Peregrine::Logger::TextFormat::operator|</definition>
+        <argsstring>(uint16_t mask) const</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>&quot;or&quot;s the format with <computeroutput>mask</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mask to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of &quot;or&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="104" column="22" bodyfile="src/CLIColors.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classPeregrine_1_1Logger_1_1TextFormat_1a56afb88dafd8dbd0136f1c17f51f6fe2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></type>
+        <definition>TextFormat Peregrine::Logger::TextFormat::operator|</definition>
+        <argsstring>(TextFormat mask) const</argsstring>
+        <name>operator|</name>
+        <param>
+          <type><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>&quot;or&quot;s the format with <computeroutput>mask</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mask to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of &quot;or&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="113" column="24" bodyfile="src/CLIColors.hpp" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classPeregrine_1_1Logger_1_1TextFormat_1a46977ee993002028d5c2e1b2a7ffd7e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Peregrine::Logger::TextFormat::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+<para>Checks if the format is non-zero. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A <computeroutput>bool</computeroutput> which is <computeroutput>true</computeroutput> when format is non-zero, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="120" column="13" bodyfile="src/CLIColors.hpp" bodystart="120" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wrapper for <computeroutput>uint8_t</computeroutput>, so <computeroutput>operator&lt;&lt;</computeroutput> doesn&apos;t override the default <computeroutput>operator&lt;&lt;</computeroutput> for <computeroutput>uint8_t</computeroutput>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Peregrine::Logger::TextFormat</label>
+        <link refid="classPeregrine_1_1Logger_1_1TextFormat"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/CLIColors.hpp" line="43" column="1" bodyfile="src/CLIColors.hpp" bodystart="42" bodyend="124"/>
+    <listofallmembers>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ab6205151f7aa0d3b6ed6081b6a166e2a" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>Blue</name></member>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac910eace793d3cabfcbf712465aedc40" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>Bold</name></member>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac40f888ed6ae37678efad3d7c5a8dd87" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>Cyan</name></member>
+      <member refid="group__TextFormatFlags_1gac76971ef4921f810f39823f9ac08eba2" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>FormatFlags</name></member>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a382db0af9255a78d440fda5c2dc6a744" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>Green</name></member>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afb5d4184b939231d22ea925cc1b18afa" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>Italic</name></member>
+      <member refid="classPeregrine_1_1Logger_1_1TextFormat_1aeb80d81352119558ace82ad5d0087bee" prot="private" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>m_Fmt</name></member>
+      <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a46977ee993002028d5c2e1b2a7ffd7e1" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>operator bool</name></member>
+      <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a451d8e336822fff3860f053cb1e48be2" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>operator&amp;</name></member>
+      <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a4fa77fb4cab65ce5882f1190c3302d98" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>operator&amp;</name></member>
+      <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a1028a7217d5953a8c5f8687a020cd96b" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>operator|</name></member>
+      <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a56afb88dafd8dbd0136f1c17f51f6fe2" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>operator|</name></member>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a4bba5ca30901a71b91ff20edf8533afd" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>Pink</name></member>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a6b67ed3df23c0c8a8814ddbd1cfaf2b4" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>Red</name></member>
+      <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a2c404e1921990acee64fd066173beffc" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>TextFormat</name></member>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ae90fbea2f47e6a792e5bf0aac4d25270" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>White</name></member>
+      <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afd4b7d7b06b8c236242ade88910cc901" prot="public" virt="non-virtual"><scope>Peregrine::Logger::TextFormat</scope><name>Yellow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

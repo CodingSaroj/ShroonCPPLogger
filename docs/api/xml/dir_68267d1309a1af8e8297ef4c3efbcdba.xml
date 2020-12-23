@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="CLIColors_8cpp">CLIColors.cpp</innerfile>
+    <innerfile refid="CLIColors_8hpp">CLIColors.hpp</innerfile>
+    <innerfile refid="Logger_8cpp">Logger.cpp</innerfile>
+    <innerfile refid="Logger_8hpp">Logger.hpp</innerfile>
+    <innerfile refid="LogLevels_8hpp">LogLevels.hpp</innerfile>
+    <innerfile refid="StringFormat_8cpp">StringFormat.cpp</innerfile>
+    <innerfile refid="StringFormat_8hpp">StringFormat.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

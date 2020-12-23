@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__DebugLoggingMacros" kind="group">
+    <compoundname>DebugLoggingMacros</compoundname>
+    <title>DebugLoggingMacros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga2fd1fd9fef3b7e267261c8fd1c825e75" prot="public" static="no">
+        <name>PG_INFO</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="59" column="17" bodyfile="src/Logger.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gab84c05f86f8f35f0f7e3c2689d07a4fd" prot="public" static="no">
+        <name>PG_WARNING</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="69" column="17" bodyfile="src/Logger.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga042fa3f79256fdf9939ff996507476aa" prot="public" static="no">
+        <name>PG_ERROR</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="79" column="17" bodyfile="src/Logger.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga88e7b470c2599c8677c9f53fa0bd4690" prot="public" static="no">
+        <name>PG_ASSERT</name>
+        <param><defname>cond</defname></param>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="85" column="17" bodyfile="src/Logger.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This group consists of all the macros used for logging only in debug mode. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__TextFormatFlags" kind="group">
+    <compoundname>TextFormatFlags</compoundname>
+    <title>TextFormatFlags</title>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__TextFormatFlags_1gac76971ef4921f810f39823f9ac08eba2" prot="public" static="no" strong="no">
+        <type>uint16_t</type>
+        <name>FormatFlags</name>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac910eace793d3cabfcbf712465aedc40" prot="public">
+          <name>Bold</name>
+          <initializer>= 0x0001</initializer>
+          <briefdescription>
+<para>Changes the style of stream output to be bold. This doesn&apos;t work on Windows. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afb5d4184b939231d22ea925cc1b18afa" prot="public">
+          <name>Italic</name>
+          <initializer>= 0x0002</initializer>
+          <briefdescription>
+<para>Changes the style of stream output to be italic. This doesn&apos;t work on Windows. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ae90fbea2f47e6a792e5bf0aac4d25270" prot="public">
+          <name>White</name>
+          <initializer>= 0x0004</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be white. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a6b67ed3df23c0c8a8814ddbd1cfaf2b4" prot="public">
+          <name>Red</name>
+          <initializer>= 0x0008</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be red. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a382db0af9255a78d440fda5c2dc6a744" prot="public">
+          <name>Green</name>
+          <initializer>= 0x0010</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be green. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ab6205151f7aa0d3b6ed6081b6a166e2a" prot="public">
+          <name>Blue</name>
+          <initializer>= 0x0020</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be blue. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afd4b7d7b06b8c236242ade88910cc901" prot="public">
+          <name>Yellow</name>
+          <initializer>= 0x0040</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be yellow. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac40f888ed6ae37678efad3d7c5a8dd87" prot="public">
+          <name>Cyan</name>
+          <initializer>= 0x0080</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be cyan. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a4bba5ca30901a71b91ff20edf8533afd" prot="public">
+          <name>Pink</name>
+          <initializer>= 0x0100</initializer>
+          <briefdescription>
+<para>Changes the color of stream output to be pink. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing values for different text format flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CLIColors.hpp" line="56" column="1" bodyfile="src/CLIColors.hpp" bodystart="55" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This group contains all possible values for <computeroutput><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></computeroutput>. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

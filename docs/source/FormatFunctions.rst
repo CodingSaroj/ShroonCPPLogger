@@ -1,0 +1,4 @@
+Format Functions
+=================
+
+.. doxygengroup:: FormatFunctions

@@ -1,0 +1,4 @@
+Log Levels
+==========
+
+.. doxygengroup:: LogLevel

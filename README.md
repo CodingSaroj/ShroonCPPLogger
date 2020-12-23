@@ -6,13 +6,13 @@ A simple logging library written in C++17.
 
 ## Building
 
-See the documentation page on [Building](https://peregrinecpplogger.readthedocs.io/en/latest/Building/).
+See the documentation page on [Building](https://peregrinecpplogger.readthedocs.io/en/latest/Building.html).
 
 ## Getting Started
 
-See the documentation page on [Getting Started](https://peregrinecpplogger.readthedocs.io/en/latest/GettingStarted/).
+See the documentation page on [Getting Started](https://peregrinecpplogger.readthedocs.io/en/latest/GettingStarted.html).
 
 ## Documentation and API Reference
 
 The documentation is found [here](https://peregrinecpplogger.readthedocs.io/en/latest/) and
-the API Reference is found [here](https://peregrinecpplogger.readthedocs.io/en/latest/APIReference/).
+the API Reference is found [here](https://peregrinecpplogger.readthedocs.io/en/latest/APIReference.html).

@@ -5,6 +5,24 @@ Make sure you have `CMake 3.14+ <https://cmake.org>`_ installed on your system.
 
 **Note**: The instructions here use CMake command line interface. The project can also be built using `CMake GUI <https://cmake.org/cmake/help/latest/manual/cmake-gui.1.html>`_.
 
+Linking with a CMake project
+---------------------------------------
+
+If the project in which you want to link this library also uses CMake then using this library is as simple as adding the following to your ``CMakeLists.txt``:
+
+.. code:: cmake
+set(PeregrineCPPLogger_DIR "<path to project root of library>")
+find_package(PeregrineCPPLogger 1.0)
+
+...
+
+# Add the include directories
+target_include_directories(<YourTarget> [PUBLIC|PRIVATE] PeregrineCPPLogger_INCLUDE_DIRS)
+
+# Link the output library to <YourTarget>
+target_link_libraries(<YourTarget> PeregrineCPPLogger::PeregrineCPPLogger)
+.. endcode::
+
 CMake options
 -------------
 
@@ -49,10 +67,8 @@ because I do not have a Mac. So, any help on that is welcome.
 Output location
 ------------------
 
-The library will be inside ``lib/<config>/<os_name>/<architecture>/`` where
+The library will be inside ``build/lib/<config>`` where
 
 * ``<config>`` is Release by default. Refer to `this <https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html>`_ for possible values for ``<config>``.
-* ``<os_name>`` is the name of your Operating System. Example - ``Windows``, ``Linux`` etc.
-* ``<architecture>`` is the architecture of your CPU. Example - ``x86``, ``x86_64`` etc.
 
 If you built the example then the binary will be inside ``example/bin/`` inside the project root.

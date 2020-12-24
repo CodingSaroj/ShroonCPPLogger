@@ -50,11 +50,11 @@
  * This group consists of all the macros used for logging only in debug mode.
  * @{
  */
-#ifdef DEBUG
+#ifndef NDEBUG
     // If log level is set at Info then define PG_INFO.
     #if PG_LOG_LEVEL >= PG_LOG_LEVEL_INFO
         /**
-         * @brief Calls \p Peregrine::Logger::LogInfo() when macro \p DEBUG is defined i.e. in debug mode and when <tt>PG_LOG_LEVEL >= PG_LOG_LEVEL_INFO</tt>.
+         * @brief Calls \p Peregrine::Logger::LogInfo() when macro \p NDEBUG is not defined i.e. in debug mode and when <tt>PG_LOG_LEVEL >= PG_LOG_LEVEL_INFO</tt>.
          */
         #define PG_INFO(section, ...) Peregrine::Logger::LogInfo(section, Peregrine::Logger::Format(__VA_ARGS__));
     #else
@@ -64,7 +64,7 @@
     // If log level is set above or at Warning then define PG_WARNING.
     #if PG_LOG_LEVEL >= PG_LOG_LEVEL_WARNING
         /**
-         * @brief Calls \p Peregrine::Logger::LogWarning() when macro \p DEBUG is defined i.e. in debug mode and when <tt>PG_LOG_LEVEL >= PG_LOG_LEVEL_WARNING</tt>.
+         * @brief Calls \p Peregrine::Logger::LogWarning() when macro \p NDEBUG is not defined i.e. in debug mode and when <tt>PG_LOG_LEVEL >= PG_LOG_LEVEL_WARNING</tt>.
          */
         #define PG_WARNING(section, ...) Peregrine::Logger::LogWarning(section, Peregrine::Logger::Format(__VA_ARGS__));
     #else
@@ -74,12 +74,12 @@
     // If log level is set above or at Error then define PG_ERROR and PG_ASSERT.
     #if PG_LOG_LEVEL >= PG_LOG_LEVEL_ERROR
         /**
-         * @brief Calls \p Peregrine::Logger::LogError() when macro \p DEBUG is defined i.e. in debug mode and when <tt>PG_LOG_LEVEL >= PG_LOG_LEVEL_ERROR</tt>.
+         * @brief Calls \p Peregrine::Logger::LogError() when macro \p NDEBUG is not defined i.e. in debug mode and when <tt>PG_LOG_LEVEL >= PG_LOG_LEVEL_ERROR</tt>.
          */
         #define PG_ERROR(section, ...) Peregrine::Logger::LogError(section, Peregrine::Logger::Format(__VA_ARGS__));
 
         /**
-         * @brief Calls \p Peregrine::Logger::LogFatalError() when macro \p DEBUG is defined i.e. in debug mode and when <tt>PG_LOG_LEVEL >= PG_LOG_LEVEL_ERROR</tt>
+         * @brief Calls \p Peregrine::Logger::LogFatalError() when macro \p NDEBUG is not defined i.e. in debug mode and when <tt>PG_LOG_LEVEL >= PG_LOG_LEVEL_ERROR</tt>
          * otherwise calls \p PG_DEBUG_BREAK().
          */
         #define PG_ASSERT(cond, section, ...) if (!(cond)) { Peregrine::Logger::LogFatalError(section, Peregrine::Logger::Format(__VA_ARGS__)); }

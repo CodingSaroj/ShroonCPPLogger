@@ -20,6 +20,7 @@
 
 #include <sstream>
 #include <string>
+#include <vector>
 
 /**
  * @brief The namespace in which all the projects under Peregrine exist.

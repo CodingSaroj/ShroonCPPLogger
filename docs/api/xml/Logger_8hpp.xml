@@ -108,7 +108,7 @@
         <param><defname>...</defname></param>
         <initializer><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -122,7 +122,7 @@
         <param><defname>...</defname></param>
         <initializer><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -136,7 +136,7 @@
         <param><defname>...</defname></param>
         <initializer><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -151,7 +151,7 @@
         <param><defname>...</defname></param>
         <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>DEBUG</computeroutput> is defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -264,7 +264,7 @@
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Debug<sp/>mode<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#ifndef<sp/>NDEBUG</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>at<sp/>Info<sp/>then<sp/>define<sp/>PG_INFO.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>

@@ -10,18 +10,17 @@ Linking with a CMake project
 
 If the project in which you want to link this library also uses CMake then using this library is as simple as adding the following to your ``CMakeLists.txt``:
 
-.. code:: cmake
-set(PeregrineCPPLogger_DIR "<path to project root of library>")
-find_package(PeregrineCPPLogger 1.0)
-
-...
-
-# Add the include directories
-target_include_directories(<YourTarget> [PUBLIC|PRIVATE] PeregrineCPPLogger_INCLUDE_DIRS)
-
-# Link the output library to <YourTarget>
-target_link_libraries(<YourTarget> PeregrineCPPLogger::PeregrineCPPLogger)
-.. endcode::
+.. code-block:: cmake
+    set(PeregrineCPPLogger_DIR "<path to project root of library>")
+    find_package(PeregrineCPPLogger 1.0)
+    
+    ...
+    
+    # Add the include directories
+    target_include_directories(<YourTarget> [PUBLIC|PRIVATE] PeregrineCPPLogger_INCLUDE_DIRS)
+    
+    # Link the output library to <YourTarget>
+    target_link_libraries(<YourTarget> PeregrineCPPLogger::PeregrineCPPLogger)
 
 CMake options
 -------------

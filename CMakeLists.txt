@@ -25,11 +25,11 @@ message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 message(STATUS "Target OS: ${CMAKE_SYSTEM_NAME}")
 message(STATUS "Target CPU: ${CMAKE_SYSTEM_PROCESSOR}")
 
-set(PGIncludeDir "${PROJECT_SOURCE_DIR}/include")
+set(PGIncludeDir "${CMAKE_CURRENT_LIST_DIR}/include")
 set(PGLibraryDir "${CMAKE_CURRENT_BINARY_DIR}/lib/${CMAKE_BUILD_TYPE}/")
 
-file(GLOB_RECURSE SRC_FILES "${PROJECT_SOURCE_DIR}/src/*.hpp" "${PROJECT_SOURCE_DIR}/src/*.cpp")
-file(GLOB_RECURSE HEADER_FILES "${PROJECT_SOURCE_DIR}/src/*.hpp")
+file(GLOB_RECURSE SRC_FILES "${CMAKE_CURRENT_LIST_DIR}/src/*.hpp" "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp")
+file(GLOB_RECURSE HEADER_FILES "${CMAKE_CURRENT_LIST_DIR}/src/*.hpp")
 
 file(MAKE_DIRECTORY "${PGIncludeDir}/Peregrine/Logger/")
 file(COPY ${HEADER_FILES} DESTINATION "${PGIncludeDir}/Peregrine/Logger/")
@@ -42,7 +42,7 @@ set_target_properties(PeregrineCPPLogger PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY ${PGLibraryDir}
 )
 
-target_include_directories(PeregrineCPPLogger PUBLIC "${PROJECT_SOURCE_DIR}/src/")
+target_include_directories(PeregrineCPPLogger PUBLIC "${CMAKE_CURRENT_LIST_DIR}/src/")
 
 install(
     TARGETS PeregrineCPPLogger EXPORT PeregrineCPPLoggerTargets
@@ -53,7 +53,7 @@ install(
 include(CMakePackageConfigHelpers)
 
 write_basic_package_version_file(
-    "${PROJECT_SOURCE_DIR}/cmake/PeregrineCPPLoggerConfigVersion.cmake"
+    "${CMAKE_CURRENT_LIST_DIR}/cmake/PeregrineCPPLoggerConfigVersion.cmake"
     VERSION 1.0.0
     COMPATIBILITY AnyNewerVersion
 )
@@ -61,7 +61,7 @@ write_basic_package_version_file(
 export(
     EXPORT PeregrineCPPLoggerTargets
     NAMESPACE PeregrineCPPLogger::
-    FILE "${PROJECT_SOURCE_DIR}/cmake/PeregrineCPPLoggerTargets.cmake"
+    FILE "${CMAKE_CURRENT_LIST_DIR}/cmake/PeregrineCPPLoggerTargets.cmake"
 )
 
 if (${PG_CPP_LOGGER_BUILD_EXAMPLE})
@@ -71,11 +71,11 @@ if (${PG_CPP_LOGGER_BUILD_EXAMPLE})
 
     set_target_properties(Example PROPERTIES
         VERSION 1.0.0
-        RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/example/bin/"
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/bin/example/"
     )
 
     target_include_directories(Example PUBLIC "${PGIncludeDir}")
-    target_link_directories(Example PUBLIC "${PGLibraryDir}/${CMAKE_BUILD_TYPE}/${CMAKE_SYSTEM_NAME}/${CMAKE_SYSTEM_PROCESSOR}")
+    target_link_directories(Example PUBLIC "${PGLibraryDir}")
     target_link_libraries(Example PUBLIC PeregrineCPPLogger)
 else()
     message(STATUS "Build example: OFF")
@@ -87,7 +87,7 @@ if (${PG_CPP_LOGGER_BUILD_DOCS})
     add_custom_target(
       docs ALL
       COMMAND "doxygen"
-      WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+      WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
       COMMENT "Generating API documentation with Doxygen"
     )
 

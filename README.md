@@ -1,4 +1,4 @@
-<img src="logos/PergrineCPPLogger256x256.png">
+<img src="https://github.com/SarojKumar10/PeregrineCPPLogger/blob/master/logos/PergrineCPPLogger256x256.png">
 
 # PeregrineCPPLogger
 

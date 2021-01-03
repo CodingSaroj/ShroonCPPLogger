@@ -1,6 +1,6 @@
 <img src="https://github.com/SarojKumar10/PeregrineCPPLogger/raw/master/logos/PergrineCPPLogger256x256.png">
 
-# PeregrineCPPLogger
+# Peregrine C++ Logger
 
 A simple logging library written in C++17.
 

@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="39" column="14" bodyfile="src/Logger.cpp" bodystart="39" bodyend="44" declfile="src/Logger.hpp" declline="184" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="66" column="14" bodyfile="src/Logger.cpp" bodystart="66" bodyend="78" declfile="src/Logger.hpp" declline="183" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="46" column="14" bodyfile="src/Logger.cpp" bodystart="46" bodyend="51" declfile="src/Logger.hpp" declline="193" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="80" column="14" bodyfile="src/Logger.cpp" bodystart="80" bodyend="92" declfile="src/Logger.hpp" declline="192" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="53" column="14" bodyfile="src/Logger.cpp" bodystart="53" bodyend="58" declfile="src/Logger.hpp" declline="202" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="94" column="14" bodyfile="src/Logger.cpp" bodystart="94" bodyend="106" declfile="src/Logger.hpp" declline="201" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="60" column="14" bodyfile="src/Logger.cpp" bodystart="60" bodyend="64" declfile="src/Logger.hpp" declline="212" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="108" column="14" bodyfile="src/Logger.cpp" bodystart="108" bodyend="120" declfile="src/Logger.hpp" declline="211" declcolumn="14"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

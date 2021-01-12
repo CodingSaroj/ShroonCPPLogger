@@ -15,14 +15,41 @@
  */
 #include "Logger.hpp"
 
+#ifdef _WIN32
+    #include <windows.h>
+#endif
+
 namespace Peregrine
 {
     namespace Logger
     {
+    #ifdef _WIN32
+        static bool s_Win32ConsoleInitialized = false;
+    #endif
+
         // Use std::cout as default output stream.
         static std::ostream * s_Out = &std::cout;
 
         static const double s_StartTime = std::chrono::system_clock::now().time_since_epoch().count() / 1000000.0;
+
+    #ifdef _WIN32
+        static void InitWin32Console()
+        {
+            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+            DWORD consoleMode = 0;
+
+            GetConsoleMode(hConsole, &consoleMode);
+            
+            if (!(consoleMode & ENABLE_VIRTUAL_TERMINAL_PROCESSING))
+            {
+                consoleMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+                SetConsoleMode(hConsole, consoleMode);
+            }
+
+            s_Win32ConsoleInitialized = true;
+        }
+    #endif
 
         static std::string GetTimestamp()
         {
@@ -38,28 +65,57 @@ namespace Peregrine
 
         void LogInfo(const std::string & section, const std::string & log)
         {
+        #ifdef _WIN32
+            if (!s_Win32ConsoleInitialized)
+            {
+                InitWin32Console();
+            }
+        #endif
+
             std::ostream & out = *s_Out;
 
-            out<<Format("{}[{}]{}Info::{}: {}{}\n", TextFormat::Green, GetTimestamp(), TextFormat::Cyan | TextFormat::Bold, section, log, TextFormat::White);
+            out<<Format("{cgrnbx}[{}]{ccynbx}Info::{}: {}{cwhtxx}\n", "", GetTimestamp(), "", section, log, "");
         }
 
         void LogWarning(const std::string & section, const std::string & log)
         {
+        #ifdef _WIN32
+            if (!s_Win32ConsoleInitialized)
+            {
+                InitWin32Console();
+            }
+        #endif
+
             std::ostream & out = *s_Out;
 
-            out<<Format("{}[{}]{}Warning::{}: {}{}\n", TextFormat::Green, GetTimestamp(), TextFormat::Yellow | TextFormat::Bold, section, log, TextFormat::White);
+            out<<Format("{cgrnbx}[{}]{cylwbx}Warning::{}: {}{cwhtxx}\n", "", GetTimestamp(), "", section, log, "");
         }
 
         void LogError(const std::string & section, const std::string & log)
         {
+        #ifdef _WIN32
+            if (!s_Win32ConsoleInitialized)
+            {
+                InitWin32Console();
+            }
+        #endif
+
             std::ostream & out = *s_Out;
 
-            out<<Format("{}[{}]{}Error::{}: {}{}\n", TextFormat::Green, GetTimestamp(), TextFormat::Red | TextFormat::Bold, section, log, TextFormat::White);
+            out<<Format("{cgrnbx}[{}]{credbx}Error::{}: {}{cwhtxx}\n", "", GetTimestamp(), "", section, log, "");
         }
 
         void LogFatalError(const std::string & section, const std::string & log)
         {
-            std::cerr<<Format("{}[{}]{}Error::{}: {}{}\n", TextFormat::Green, GetTimestamp(), TextFormat::Red | TextFormat::Bold, section, log, TextFormat::White);
+        #ifdef _WIN32
+            if (!s_Win32ConsoleInitialized)
+            {
+                InitWin32Console();
+            }
+        #endif
+
+            std::cerr<<Format("{cgrnbx}[{}]{credbx}Error::{}: {}{cwhtxx}\n", "", GetTimestamp(), "", section, log, "");
+
             PG_DEBUG_BREAK();
         }
     }

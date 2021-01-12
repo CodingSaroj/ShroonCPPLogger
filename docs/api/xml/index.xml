@@ -1,30 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
-  <compound refid="classPeregrine_1_1Logger_1_1TextFormat" kind="class"><name>Peregrine::Logger::TextFormat</name>
-    <member refid="group__TextFormatFlags_1gac76971ef4921f810f39823f9ac08eba2" kind="enum"><name>FormatFlags</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac910eace793d3cabfcbf712465aedc40" kind="enumvalue"><name>Bold</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afb5d4184b939231d22ea925cc1b18afa" kind="enumvalue"><name>Italic</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ae90fbea2f47e6a792e5bf0aac4d25270" kind="enumvalue"><name>White</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a6b67ed3df23c0c8a8814ddbd1cfaf2b4" kind="enumvalue"><name>Red</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a382db0af9255a78d440fda5c2dc6a744" kind="enumvalue"><name>Green</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ab6205151f7aa0d3b6ed6081b6a166e2a" kind="enumvalue"><name>Blue</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afd4b7d7b06b8c236242ade88910cc901" kind="enumvalue"><name>Yellow</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac40f888ed6ae37678efad3d7c5a8dd87" kind="enumvalue"><name>Cyan</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a4bba5ca30901a71b91ff20edf8533afd" kind="enumvalue"><name>Pink</name></member>
-    <member refid="classPeregrine_1_1Logger_1_1TextFormat_1aeb80d81352119558ace82ad5d0087bee" kind="variable"><name>m_Fmt</name></member>
-    <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a2c404e1921990acee64fd066173beffc" kind="function"><name>TextFormat</name></member>
-    <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a451d8e336822fff3860f053cb1e48be2" kind="function"><name>operator&amp;</name></member>
-    <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a4fa77fb4cab65ce5882f1190c3302d98" kind="function"><name>operator&amp;</name></member>
-    <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a1028a7217d5953a8c5f8687a020cd96b" kind="function"><name>operator|</name></member>
-    <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a56afb88dafd8dbd0136f1c17f51f6fe2" kind="function"><name>operator|</name></member>
-    <member refid="classPeregrine_1_1Logger_1_1TextFormat_1a46977ee993002028d5c2e1b2a7ffd7e1" kind="function"><name>operator bool</name></member>
-  </compound>
   <compound refid="namespacePeregrine" kind="namespace"><name>Peregrine</name>
   </compound>
   <compound refid="namespacePeregrine_1_1Logger" kind="namespace"><name>Peregrine::Logger</name>
     <member refid="namespacePeregrine_1_1Logger_1a7807980a583b25ca9842144e5653405e" kind="variable"><name>s_Out</name></member>
     <member refid="namespacePeregrine_1_1Logger_1a19311159e53bf6236f0baf0d1b5cf979" kind="variable"><name>s_StartTime</name></member>
-    <member refid="group__TextFormatting_1gafc4cd0f1b25d9856e3070b8f09e1d69e" kind="function"><name>operator&lt;&lt;</name></member>
     <member refid="namespacePeregrine_1_1Logger_1a23fccd37b55945e0c94f78722121c7e1" kind="function"><name>GetTimestamp</name></member>
     <member refid="namespacePeregrine_1_1Logger_1a56fdad18de42922ddac917e53df7eb13" kind="function"><name>SetOStream</name></member>
     <member refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kind="function"><name>LogInfo</name></member>
@@ -38,10 +18,6 @@
     <member refid="group__FormatFunctions_1gac491104914ee0709ddb89714db3df1e7" kind="function"><name>Format</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
-  </compound>
-  <compound refid="CLIColors_8cpp" kind="file"><name>CLIColors.cpp</name>
-  </compound>
-  <compound refid="CLIColors_8hpp" kind="file"><name>CLIColors.hpp</name>
   </compound>
   <compound refid="Logger_8cpp" kind="file"><name>Logger.cpp</name>
   </compound>
@@ -65,21 +41,6 @@
   <compound refid="StringFormat_8cpp" kind="file"><name>StringFormat.cpp</name>
   </compound>
   <compound refid="StringFormat_8hpp" kind="file"><name>StringFormat.hpp</name>
-  </compound>
-  <compound refid="group__TextFormatting" kind="group"><name>TextFormatting</name>
-    <member refid="group__TextFormatting_1gafc4cd0f1b25d9856e3070b8f09e1d69e" kind="function"><name>operator&lt;&lt;</name></member>
-  </compound>
-  <compound refid="group__TextFormatFlags" kind="group"><name>TextFormatFlags</name>
-    <member refid="group__TextFormatFlags_1gac76971ef4921f810f39823f9ac08eba2" kind="enum"><name>FormatFlags</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac910eace793d3cabfcbf712465aedc40" kind="enumvalue"><name>Bold</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afb5d4184b939231d22ea925cc1b18afa" kind="enumvalue"><name>Italic</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ae90fbea2f47e6a792e5bf0aac4d25270" kind="enumvalue"><name>White</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a6b67ed3df23c0c8a8814ddbd1cfaf2b4" kind="enumvalue"><name>Red</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a382db0af9255a78d440fda5c2dc6a744" kind="enumvalue"><name>Green</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ab6205151f7aa0d3b6ed6081b6a166e2a" kind="enumvalue"><name>Blue</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2afd4b7d7b06b8c236242ade88910cc901" kind="enumvalue"><name>Yellow</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2ac40f888ed6ae37678efad3d7c5a8dd87" kind="enumvalue"><name>Cyan</name></member>
-    <member refid="group__TextFormatFlags_1ggac76971ef4921f810f39823f9ac08eba2a4bba5ca30901a71b91ff20edf8533afd" kind="enumvalue"><name>Pink</name></member>
   </compound>
   <compound refid="group__LoggingMacros" kind="group"><name>LoggingMacros</name>
   </compound>

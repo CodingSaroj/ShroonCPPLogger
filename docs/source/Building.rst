@@ -29,7 +29,8 @@ CMake options
 These options are passed to cmake as ``-D<option_name>=<value>``.
 
 * **CMAKE_BUILD_TYPE**: What configuration to use while building. Refer to `this <https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html>`_ for possiblevalues for ``<config>``. It is set to ``Release`` by default.
-* **PG_LOG_BUILD_EXAMPLE**: Whether to build examples or not. Either ``ON`` or ``OFF``. ``OFF`` by default.
+* **PG_CPP_LOGGER_BUILD_EXAMPLE**: Whether to build examples or not. Either ``ON`` or ``OFF``. ``OFF`` by default.
+* **PG_CPP_LOGGER_BUILD_DOCS**: Whether to build doxygen docs or not. Outputs in HTML and XML formats. Either ``ON`` or ``OFF``. ``OFF`` by default.
 
 Windows
 -------
@@ -40,7 +41,7 @@ Make sure ``cmake`` is in your ``PATH``.
 
 Open command prompt in the root project directory and execute the following commands:
 1. ``mkdir build && cd build``
-2. ``cmake .. -G "Visual Studio <vs_version>" -DCMAKE_BUILD_TYPE=<config> -DPG_LOG_BUILD_EXAMPLE=[ON|OFF]``
+2. ``cmake .. -G "Visual Studio <vs_version>" -DCMAKE_BUILD_TYPE=<config>``
 
 The solution file is generated. Open it with Visual Studio and build it.
 ``<vs_version>`` must be ``15 2017`` or higher as this project uses C++17.
@@ -55,7 +56,7 @@ Run ``make -v`` in terminal to check if it is installed.
 
 Open terminal in the root project directory and execute the following commands:
 1. ``mkdir build && cd build``
-2. ``cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=<config> -DPG_LOG_BUILD_EXAMPLE=[ON|OFF]``
+2. ``cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=<config>``
 3. ``make all``
 
 MacOS
@@ -71,4 +72,4 @@ The library will be inside ``build/lib/<config>`` where
 
 * ``<config>`` is Release by default. Refer to `this <https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html>`_ for possible values for ``<config>``.
 
-If you built the example then the binary will be inside ``example/bin/`` inside the project root.
+If you built the example then the binary will be inside ``build/example/`` inside the project root.

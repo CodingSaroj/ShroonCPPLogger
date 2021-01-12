@@ -19,7 +19,6 @@
 
 #include <csignal>
 
-#include "CLIColors.hpp"
 #include "StringFormat.hpp"
 #include "LogLevels.hpp"
 

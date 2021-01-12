@@ -52,7 +52,7 @@ set_target_properties(PeregrineCPPLogger::PeregrineCPPLogger PROPERTIES
 set_property(TARGET PeregrineCPPLogger::PeregrineCPPLogger APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(PeregrineCPPLogger::PeregrineCPPLogger PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/home/saroj/workspace/PeregrineCPPLogger/build-i686-windows/lib/Release/libPeregrineCPPLogger.a"
+  IMPORTED_LOCATION_RELEASE "/home/saroj/workspace/PeregrineCPPLogger/build/lib/Release/libPeregrineCPPLogger.a"
   )
 
 # This file does not depend on other imported targets which have

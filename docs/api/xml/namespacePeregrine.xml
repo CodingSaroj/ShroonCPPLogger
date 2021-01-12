@@ -8,6 +8,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/CLIColors.cpp" line="23" column="1"/>
+    <location file="src/Logger.cpp" line="23" column="1"/>
   </compounddef>
 </doxygen>

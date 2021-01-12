@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="namespacePeregrine_1_1Logger" kind="namespace" language="C++">
     <compoundname>Peregrine::Logger</compoundname>
-    <innerclass refid="classPeregrine_1_1Logger_1_1TextFormat" prot="public">Peregrine::Logger::TextFormat</innerclass>
       <sectiondef kind="var">
       <memberdef kind="variable" id="namespacePeregrine_1_1Logger_1a7807980a583b25ca9842144e5653405e" prot="public" static="yes" mutable="no">
         <type>std::ostream *</type>
@@ -16,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="23" column="30" bodyfile="src/Logger.cpp" bodystart="23" bodyend="-1"/>
+        <location file="src/Logger.cpp" line="31" column="30" bodyfile="src/Logger.cpp" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacePeregrine_1_1Logger_1a19311159e53bf6236f0baf0d1b5cf979" prot="public" static="yes" mutable="no">
         <type>const double</type>
@@ -30,52 +29,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="25" column="29" bodyfile="src/Logger.cpp" bodystart="25" bodyend="-1"/>
+        <location file="src/Logger.cpp" line="33" column="29" bodyfile="src/Logger.cpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="group__TextFormatting_1gafc4cd0f1b25d9856e3070b8f09e1d69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::ostream &amp;</type>
-        <definition>std::ostream &amp; Peregrine::Logger::operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;out, const TextFormat &amp;fmt)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>std::ostream &amp;</type>
-          <declname>out</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref> &amp;</type>
-          <declname>fmt</declname>
-        </param>
-        <briefdescription>
-<para><computeroutput>operator&lt;&lt;</computeroutput> so <computeroutput><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></computeroutput> can be passed into an <computeroutput>std::ostream</computeroutput> to set text color. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>out</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The <computeroutput>std::ostream</computeroutput> to which the <computeroutput>fmt</computeroutput> will be applied. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>fmt</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The <computeroutput><ref refid="classPeregrine_1_1Logger_1_1TextFormat" kindref="compound">TextFormat</ref></computeroutput> to apply to <computeroutput>out</computeroutput>.</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para><computeroutput>out</computeroutput> with <computeroutput>fmt</computeroutput> applied. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/CLIColors.cpp" line="26" column="9" bodyfile="src/CLIColors.cpp" bodystart="26" bodyend="112" declfile="src/CLIColors.hpp" declline="134" declcolumn="9"/>
-      </memberdef>
       <memberdef kind="function" id="namespacePeregrine_1_1Logger_1a23fccd37b55945e0c94f78722121c7e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
         <definition>static std::string Peregrine::Logger::GetTimestamp</definition>
@@ -87,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="27" column="28" bodyfile="src/Logger.cpp" bodystart="27" bodyend="32"/>
+        <location file="src/Logger.cpp" line="54" column="28" bodyfile="src/Logger.cpp" bodystart="54" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="namespacePeregrine_1_1Logger_1a56fdad18de42922ddac917e53df7eb13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -115,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="34" column="14" bodyfile="src/Logger.cpp" bodystart="34" bodyend="37" declfile="src/Logger.hpp" declline="169" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="61" column="14" bodyfile="src/Logger.cpp" bodystart="61" bodyend="64" declfile="src/Logger.hpp" declline="168" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -157,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="39" column="14" bodyfile="src/Logger.cpp" bodystart="39" bodyend="44" declfile="src/Logger.hpp" declline="184" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="66" column="14" bodyfile="src/Logger.cpp" bodystart="66" bodyend="78" declfile="src/Logger.hpp" declline="183" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="46" column="14" bodyfile="src/Logger.cpp" bodystart="46" bodyend="51" declfile="src/Logger.hpp" declline="193" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="80" column="14" bodyfile="src/Logger.cpp" bodystart="80" bodyend="92" declfile="src/Logger.hpp" declline="192" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -241,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="53" column="14" bodyfile="src/Logger.cpp" bodystart="53" bodyend="58" declfile="src/Logger.hpp" declline="202" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="94" column="14" bodyfile="src/Logger.cpp" bodystart="94" bodyend="106" declfile="src/Logger.hpp" declline="201" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -284,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.cpp" line="60" column="14" bodyfile="src/Logger.cpp" bodystart="60" bodyend="64" declfile="src/Logger.hpp" declline="212" declcolumn="14"/>
+        <location file="src/Logger.cpp" line="108" column="14" bodyfile="src/Logger.cpp" bodystart="108" bodyend="120" declfile="src/Logger.hpp" declline="211" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="group__FormatFunctions_1ga4746aa5b425063c44c95a435a2bbe29b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -368,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/StringFormat.cpp" line="27" column="21" bodyfile="src/StringFormat.cpp" bodystart="27" bodyend="174" declfile="src/StringFormat.hpp" declline="59" declcolumn="21"/>
+        <location file="src/StringFormat.cpp" line="27" column="21" bodyfile="src/StringFormat.cpp" bodystart="27" bodyend="212" declfile="src/StringFormat.hpp" declline="59" declcolumn="21"/>
       </memberdef>
       <memberdef kind="function" id="group__FormatFunctions_1gaba96d5b0d14029f0d9d6688a1391ec7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -543,6 +500,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/CLIColors.cpp" line="25" column="1"/>
+    <location file="src/Logger.cpp" line="25" column="1"/>
   </compounddef>
 </doxygen>

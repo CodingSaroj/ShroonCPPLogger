@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['italic_11',['Italic',['../group__TextFormatFlags.html#ggac76971ef4921f810f39823f9ac08eba2afb5d4184b939231d22ea925cc1b18afa',1,'Peregrine::Logger::TextFormat']]]
+  ['setostream_30',['SetOStream',['../namespacePeregrine_1_1Logger.html#a56fdad18de42922ddac917e53df7eb13',1,'Peregrine::Logger']]],
+  ['stringformat_2ecpp_31',['StringFormat.cpp',['../StringFormat_8cpp.html',1,'']]],
+  ['stringformat_2ehpp_32',['StringFormat.hpp',['../StringFormat_8hpp.html',1,'']]]
 ];

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.hpp" line="115" column="13" bodyfile="src/Logger.hpp" bodystart="115" bodyend="-1"/>
+        <location file="src/Logger.hpp" line="114" column="13" bodyfile="src/Logger.hpp" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__ReleaseLoggingMacros_1gace89a6174c7de1a4059a45db9d3c0004" prot="public" static="no">
         <name>PG_REL_WARNING</name>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.hpp" line="125" column="13" bodyfile="src/Logger.hpp" bodystart="125" bodyend="-1"/>
+        <location file="src/Logger.hpp" line="124" column="13" bodyfile="src/Logger.hpp" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga1380f65dcae1a6dc775fbcf728b7eb95" prot="public" static="no">
         <name>PG_REL_ERROR</name>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.hpp" line="135" column="13" bodyfile="src/Logger.hpp" bodystart="135" bodyend="-1"/>
+        <location file="src/Logger.hpp" line="134" column="13" bodyfile="src/Logger.hpp" bodystart="134" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__ReleaseLoggingMacros_1gae41fd449f2add14de11c1ba3000c7cc0" prot="public" static="no">
         <name>PG_REL_ASSERT</name>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Logger.hpp" line="141" column="13" bodyfile="src/Logger.hpp" bodystart="141" bodyend="-1"/>
+        <location file="src/Logger.hpp" line="140" column="13" bodyfile="src/Logger.hpp" bodystart="140" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

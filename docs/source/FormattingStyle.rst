@@ -130,6 +130,32 @@ Format: ``{wf<width>}``
 
 Example: ``Format("{wf4}", 20)`` will return ``"20.0000"``.
 
+``cxxxxx`` flag
+^^^^^^^^^^^^^^^
+
+It changes the color of stream. It's argument must always be an empty string.
+The first 3 characters after ``c`` are for color codes which can be the
+following:
+
+* ``wht`` - White
+* ``red`` - Red
+* ``grn`` - Green
+* ``blu`` - Blue
+* ``ylw`` - Yellow
+* ``cyn`` - Cyan
+* ``pnk`` - Pink
+
+The last two characters are for bold and italic respectively. The character for
+bold must be ``'b'`` to enable bold and the character for italic must be ``'i'``
+to enable italic. Any other value will be leave the respective options disabled
+but using ``'x'`` for disabled is recommended for uniformness.
+
+Format: ``{c<wht|red|grn|blu|ylw|cyn|pnk><b|><b|x><i|x>}``
+
+Example: ``std::cout<<Format("{credbi}Hello{cwhtxx}\n", "");`` will print ``"Hello"``
+in red with bold and italics. It will also restore the color to white with no bold or
+italics.
+
 Combinations
 ------------
 

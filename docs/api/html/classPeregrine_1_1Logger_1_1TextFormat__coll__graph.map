@@ -1,3 +1,0 @@
-<map id="Peregrine::Logger::TextFormat" name="Peregrine::Logger::TextFormat">
-<area shape="rect" id="node1" title="Wrapper for uint8_t, so operator&lt;&lt; doesn&#39;t override the default operator&lt;&lt; for uint8_t." alt="" coords="5,5,149,171"/>
-</map>

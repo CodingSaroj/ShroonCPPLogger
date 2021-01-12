@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setostream_73',['SetOStream',['../namespacePeregrine_1_1Logger.html#a56fdad18de42922ddac917e53df7eb13',1,'Peregrine::Logger']]]
+  ['tostring_48',['ToString',['../group__FormatFunctions.html#gaba96d5b0d14029f0d9d6688a1391ec7b',1,'Peregrine::Logger']]]
 ];

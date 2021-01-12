@@ -74,29 +74,21 @@ namespace Peregrine
                 {
                     if (flag == "b")
                     {
-                        // Format: {b}
-                        // Equivalent of std::boolalpha
                         bool argBool = strtoul(argStr.c_str(), nullptr, 10);
                         argStr = argBool ? "true" : "false";
                     }
                     else if (flag == "o")
                     {
-                        // Format: {o}
-                        // Equivalent of std::oct
                         uint64_t argDec = strtoul(argStr.c_str(), nullptr, 10);
                         argStr = ToString(argDec, std::oct);
                     }
                     else if (flag == "x")
                     {
-                        // Format: {x}
-                        // Equivalent of std::dec
                         uint64_t argDec = strtoul(argStr.c_str(), nullptr, 10);
                         argStr = ToString(argDec, std::hex);
                     }
                     else if (flag == "f")
                     {
-                        // Format: {f}
-                        // Equivalent of std::fixed
                         double argFlt = strtod(argStr.c_str(), nullptr);
                         argStr = ToString(argFlt, std::fixed);
                     }
@@ -106,8 +98,6 @@ namespace Peregrine
 
                         if (flag[1] == 'l')
                         {
-                            // Format: {wl<width>}
-                            // Add leading spaces to arg to match width.
                             if (argStr.size() < width)
                             {
                                 argStr.insert(argStr.begin(), width - argStr.size(), ' ');
@@ -115,8 +105,6 @@ namespace Peregrine
                         }
                         else if (flag[1] == 't')
                         {
-                            // Format: {wt<width>}
-                            // Add trailing spaces to arg to match width.
                             if (argStr.size() < width)
                             {
                                 argStr.insert(argStr.end(), width - argStr.size(), ' ');
@@ -124,8 +112,6 @@ namespace Peregrine
                         }
                         else if (flag[1] == 'c')
                         {
-                            // Format: {wm<width>}
-                            // Centralises arg by adding leading and trailing spaces to match width.
                             if (argStr.size() < width)
                             {
                                 size_t numSpaces = width - argStr.size();
@@ -148,17 +134,69 @@ namespace Peregrine
                         }
                         else if (flag[1] == 'i')
                         {
-                            // Format: {wi<width>}
-                            // Equivalent of std::setw(width)<<std::setfill('0').
                             uint64_t argNum = strtoul(argStr.c_str(), nullptr, 10);
                             argStr = ToString(argNum, std::setw(width), std::setfill('0'));
                         }
                         else if (flag[1] == 'f')
                         {
-                            // Format: {wf<width>}
-                            // Equivalent of std::setprecision(width)<<std::fixed.
                             double argNum = strtod(argStr.c_str(), nullptr);
                             argStr = ToString(argNum, std::setprecision(width), std::fixed);
+                        }
+                    }
+                    else if (flag[0] == 'c')
+                    {
+                        if (flag.size() == 6)
+                        {
+                            std::string colorCode = flag.substr(1, 3);
+                            char bold = flag[4];
+                            char italic = flag[5];
+
+                            argStr = "\033[";
+
+                            if (colorCode == "wht")
+                            {
+                                argStr += '0';
+                            }
+                            else if (colorCode == "red")
+                            {
+                                argStr += "31";
+                            }
+                            else if (colorCode == "grn")
+                            {
+                                argStr += "32";
+                            }
+                            else if (colorCode == "blu")
+                            {
+                                argStr += "34";
+                            }
+                            else if (colorCode == "ylw")
+                            {
+                                argStr += "33";
+                            }
+                            else if (colorCode == "cyn")
+                            {
+                                argStr += "36";
+                            }
+                            else if (colorCode == "pnk")
+                            {
+                                argStr += "35";
+                            }
+                            else
+                            {
+                                argStr += '0';
+                            }
+
+                            if (bold == 'b')
+                            {
+                                argStr += ";1";
+                            }
+                            
+                            if (italic == 'i')
+                            {
+                                argStr += ";3";
+                            }
+
+                            argStr += 'm';
                         }
                     }
                 }

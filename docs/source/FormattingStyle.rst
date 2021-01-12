@@ -150,7 +150,7 @@ bold must be ``'b'`` to enable bold and the character for italic must be ``'i'``
 to enable italic. Any other value will be leave the respective options disabled
 but using ``'x'`` for disabled is recommended for uniformness.
 
-Format: ``{c<wht|red|grn|blu|ylw|cyn|pnk><b|><b|x><i|x>}``
+Format: ``{c<wht|red|grn|blu|ylw|cyn|pnk><b|x><i|x>}``
 
 Example: ``std::cout<<Format("{credbi}Hello{cwhtxx}\n", "");`` will print ``"Hello"``
 in red with bold and italics. It will also restore the color to white with no bold or

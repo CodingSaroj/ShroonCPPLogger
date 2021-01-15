@@ -1,4 +1,4 @@
-<img src="https://github.com/SarojKumar10/ShroonCPPLogger/raw/master/logos/ShroonCPPLogger256x256.png">
+<img src="https://github.com/CodingSaroj/ShroonCPPLogger/raw/master/logos/ShroonCPPLogger256x256.png">
 
 # Shroon C++ Logger
 

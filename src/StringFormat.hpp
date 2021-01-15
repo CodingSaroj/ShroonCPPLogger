@@ -23,12 +23,12 @@
 #include <vector>
 
 /**
- * @brief The namespace in which all the projects under Peregrine exist.
+ * @brief The namespace in which all the projects under Shroon exist.
  */
-namespace Peregrine
+namespace Shroon
 {
     /**
-     * @brief The namespace in which all the PeregrineCPPLogger API other than macros exists.
+     * @brief The namespace in which all the ShroonCPPLogger API other than macros exists.
      */
     namespace Logger
     {

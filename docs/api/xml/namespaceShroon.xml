@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
-  <compounddef id="namespacePeregrine" kind="namespace" language="C++">
-    <compoundname>Peregrine</compoundname>
-    <innernamespace refid="namespacePeregrine_1_1Logger">Peregrine::Logger</innernamespace>
+  <compounddef id="namespaceShroon" kind="namespace" language="C++">
+    <compoundname>Shroon</compoundname>
+    <innernamespace refid="namespaceShroon_1_1Logger">Shroon::Logger</innernamespace>
     <briefdescription>
-<para>The namespace in which all the projects under <ref refid="namespacePeregrine" kindref="compound">Peregrine</ref> exist. </para>
+<para>The namespace in which all the projects under <ref refid="namespaceShroon" kindref="compound">Shroon</ref> exist. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

@@ -72,11 +72,11 @@
         <link refid="Logger_8cpp"/>
       </node>
     </invincdepgraph>
-    <innernamespace refid="namespacePeregrine">Peregrine</innernamespace>
-    <innernamespace refid="namespacePeregrine_1_1Logger">Peregrine::Logger</innernamespace>
+    <innernamespace refid="namespaceShroon">Shroon</innernamespace>
+    <innernamespace refid="namespaceShroon_1_1Logger">Shroon::Logger</innernamespace>
       <sectiondef kind="define">
-      <memberdef kind="define" id="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" prot="public" static="no">
-        <name>PG_DEBUG_BREAK</name>
+      <memberdef kind="define" id="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" prot="public" static="no">
+        <name>SHRN_DEBUG_BREAK</name>
         <param></param>
         <initializer>raise(SIGABRT);</initializer>
         <briefdescription>
@@ -88,13 +88,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="39" column="13" bodyfile="src/Logger.hpp" bodystart="39" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__DebugLoggingMacros_1ga2fd1fd9fef3b7e267261c8fd1c825e75" prot="public" static="no">
-        <name>PG_INFO</name>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga082091eaa10a6b60b451943215478f33" prot="public" static="no">
+        <name>SHRN_INFO</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_INFO</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -102,13 +102,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="58" column="17" bodyfile="src/Logger.hpp" bodystart="58" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__DebugLoggingMacros_1gab84c05f86f8f35f0f7e3c2689d07a4fd" prot="public" static="no">
-        <name>PG_WARNING</name>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gac6e55d0d3fde8a23596097af946016bb" prot="public" static="no">
+        <name>SHRN_WARNING</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_WARNING</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -116,13 +116,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="68" column="17" bodyfile="src/Logger.hpp" bodystart="68" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__DebugLoggingMacros_1ga042fa3f79256fdf9939ff996507476aa" prot="public" static="no">
-        <name>PG_ERROR</name>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gaa56b2b717f17ee88a3db73d61841c832" prot="public" static="no">
+        <name>SHRN_ERROR</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -130,14 +130,14 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="78" column="17" bodyfile="src/Logger.hpp" bodystart="78" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__DebugLoggingMacros_1ga88e7b470c2599c8677c9f53fa0bd4690" prot="public" static="no">
-        <name>PG_ASSERT</name>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gad182fd7956a1a98ca160b082033f6d57" prot="public" static="no">
+        <name>SHRN_ASSERT</name>
         <param><defname>cond</defname></param>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
+        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -145,13 +145,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="84" column="17" bodyfile="src/Logger.hpp" bodystart="84" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga5de83acc860b956760863900f7979b30" prot="public" static="no">
-        <name>PG_REL_INFO</name>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga5ed54637e55a99cc8dae71d38a0e06f8" prot="public" static="no">
+        <name>SHRN_REL_INFO</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__))</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo()</ref></computeroutput> when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_INFO</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -159,13 +159,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="114" column="13" bodyfile="src/Logger.hpp" bodystart="114" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__ReleaseLoggingMacros_1gace89a6174c7de1a4059a45db9d3c0004" prot="public" static="no">
-        <name>PG_REL_WARNING</name>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga7630f02b8fe937d2eca788af90d81c98" prot="public" static="no">
+        <name>SHRN_REL_WARNING</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__))</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning()</ref></computeroutput> when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_WARNING</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -173,13 +173,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="124" column="13" bodyfile="src/Logger.hpp" bodystart="124" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga1380f65dcae1a6dc775fbcf728b7eb95" prot="public" static="no">
-        <name>PG_REL_ERROR</name>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga7b8152bf3365a23b956b6633402a5950" prot="public" static="no">
+        <name>SHRN_REL_ERROR</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__))</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError()</ref></computeroutput> when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -187,14 +187,14 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="134" column="13" bodyfile="src/Logger.hpp" bodystart="134" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__ReleaseLoggingMacros_1gae41fd449f2add14de11c1ba3000c7cc0" prot="public" static="no">
-        <name>PG_REL_ASSERT</name>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1gacbd93347f4705e2449336faaf932894c" prot="public" static="no">
+        <name>SHRN_REL_ASSERT</name>
         <param><defname>cond</defname></param>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
+        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError()</ref></computeroutput> when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -233,103 +233,103 @@
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="LogLevels_8hpp" kindref="compound">LogLevels.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>default<sp/>log<sp/>level<sp/>if<sp/>none<sp/>is<sp/>defined.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PG_LOG_LEVEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SHRN_LOG_LEVEL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>log<sp/>level<sp/>as<sp/>Info.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_LOG_LEVEL<sp/>PG_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_LOG_LEVEL<sp/>SHRN_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_DEBUG_BREAK()<sp/>__debugbreak();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_DEBUG_BREAK()<sp/>__debugbreak();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(SIGTRAP)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_DEBUG_BREAK()<sp/>raise(SIGTRAP);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_DEBUG_BREAK()<sp/>raise(SIGTRAP);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_DEBUG_BREAK()<sp/>raise(SIGABRT);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_DEBUG_BREAK()<sp/>raise(SIGABRT);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Debug<sp/>mode<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="preprocessor">#ifndef<sp/>NDEBUG</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>at<sp/>Info<sp/>then<sp/>define<sp/>PG_INFO.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>at<sp/>Info<sp/>then<sp/>define<sp/>SHRN_INFO.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>SHRN_LOG_LEVEL<sp/>&gt;=<sp/>SHRN_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="group__DebugLoggingMacros_1ga2fd1fd9fef3b7e267261c8fd1c825e75" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_INFO(section,<sp/>...)<sp/>Peregrine::Logger::LogInfo(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="group__DebugLoggingMacros_1ga082091eaa10a6b60b451943215478f33" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SHRN_INFO(section,<sp/>...)<sp/>Shroon::Logger::LogInfo(section,<sp/>Shroon::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SHRN_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Warning<sp/>then<sp/>define<sp/>PG_WARNING.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_WARNING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Warning<sp/>then<sp/>define<sp/>SHRN_WARNING.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>SHRN_LOG_LEVEL<sp/>&gt;=<sp/>SHRN_LOG_LEVEL_WARNING</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="group__DebugLoggingMacros_1gab84c05f86f8f35f0f7e3c2689d07a4fd" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_WARNING(section,<sp/>...)<sp/>Peregrine::Logger::LogWarning(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="group__DebugLoggingMacros_1gac6e55d0d3fde8a23596097af946016bb" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SHRN_WARNING(section,<sp/>...)<sp/>Shroon::Logger::LogWarning(section,<sp/>Shroon::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SHRN_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Error<sp/>then<sp/>define<sp/>PG_ERROR<sp/>and<sp/>PG_ASSERT.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_ERROR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Error<sp/>then<sp/>define<sp/>SHRN_ERROR<sp/>and<sp/>SHRN_ASSERT.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>SHRN_LOG_LEVEL<sp/>&gt;=<sp/>SHRN_LOG_LEVEL_ERROR</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="group__DebugLoggingMacros_1ga042fa3f79256fdf9939ff996507476aa" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_ERROR(section,<sp/>...)<sp/>Peregrine::Logger::LogError(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="group__DebugLoggingMacros_1gaa56b2b717f17ee88a3db73d61841c832" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SHRN_ERROR(section,<sp/>...)<sp/>Shroon::Logger::LogError(section,<sp/>Shroon::Logger::Format(__VA_ARGS__));</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84" refid="group__DebugLoggingMacros_1ga88e7b470c2599c8677c9f53fa0bd4690" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_ASSERT(cond,<sp/>section,<sp/>...)<sp/>if<sp/>(!(cond))<sp/>{<sp/>Peregrine::Logger::LogFatalError(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="group__DebugLoggingMacros_1gad182fd7956a1a98ca160b082033f6d57" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SHRN_ASSERT(cond,<sp/>section,<sp/>...)<sp/>if<sp/>(!(cond))<sp/>{<sp/>Shroon::Logger::LogFatalError(section,<sp/>Shroon::Logger::Format(__VA_ARGS__));<sp/>}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SHRN_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PG_ASSERT(...)<sp/>PG_DEBUG_BREAK();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SHRN_ASSERT(...)<sp/>SHRN_DEBUG_BREAK();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>define<sp/>non-release<sp/>macros<sp/>in<sp/>Release<sp/>mode.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_ASSERT(...)<sp/>PG_DEBUG_BREAK();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_ASSERT(...)<sp/>SHRN_DEBUG_BREAK();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Release<sp/>mode<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Info<sp/>then<sp/>define<sp/>PG_REL_INFO.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Info<sp/>then<sp/>define<sp/>SHRN_REL_INFO.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SHRN_LOG_LEVEL<sp/>&gt;=<sp/>SHRN_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114" refid="group__ReleaseLoggingMacros_1ga5de83acc860b956760863900f7979b30" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_INFO(section,<sp/>...)<sp/>Peregrine::Logger::LogInfo(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="group__ReleaseLoggingMacros_1ga5ed54637e55a99cc8dae71d38a0e06f8" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_REL_INFO(section,<sp/>...)<sp/>Shroon::Logger::LogInfo(section,<sp/>Shroon::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_REL_INFO(...)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Warning<sp/>then<sp/>define<sp/>PG_REL_WARNING.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_WARNING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>above<sp/>or<sp/>at<sp/>Warning<sp/>then<sp/>define<sp/>SHRN_REL_WARNING.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SHRN_LOG_LEVEL<sp/>&gt;=<sp/>SHRN_LOG_LEVEL_WARNING</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124" refid="group__ReleaseLoggingMacros_1gace89a6174c7de1a4059a45db9d3c0004" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_WARNING(section,<sp/>...)<sp/>Peregrine::Logger::LogWarning(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="group__ReleaseLoggingMacros_1ga7630f02b8fe937d2eca788af90d81c98" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_REL_WARNING(section,<sp/>...)<sp/>Shroon::Logger::LogWarning(section,<sp/>Shroon::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_REL_WARNING(...)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>to<sp/>Error<sp/>then<sp/>define<sp/>PG_REL_ERROR<sp/>and<sp/>PG_REL_ASSERT.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PG_LOG_LEVEL<sp/>&gt;=<sp/>PG_LOG_LEVEL_ERROR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>log<sp/>level<sp/>is<sp/>set<sp/>to<sp/>Error<sp/>then<sp/>define<sp/>SHRN_REL_ERROR<sp/>and<sp/>SHRN_REL_ASSERT.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SHRN_LOG_LEVEL<sp/>&gt;=<sp/>SHRN_LOG_LEVEL_ERROR</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134" refid="group__ReleaseLoggingMacros_1ga1380f65dcae1a6dc775fbcf728b7eb95" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_ERROR(section,<sp/>...)<sp/>Peregrine::Logger::LogError(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="group__ReleaseLoggingMacros_1ga7b8152bf3365a23b956b6633402a5950" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_REL_ERROR(section,<sp/>...)<sp/>Shroon::Logger::LogError(section,<sp/>Shroon::Logger::Format(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140" refid="group__ReleaseLoggingMacros_1gae41fd449f2add14de11c1ba3000c7cc0" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_ASSERT(cond,<sp/>section,<sp/>...)<sp/>if<sp/>(!(cond))<sp/>{<sp/>Peregrine::Logger::LogFatalError(section,<sp/>Peregrine::Logger::Format(__VA_ARGS__));<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="group__ReleaseLoggingMacros_1gacbd93347f4705e2449336faaf932894c" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_REL_ASSERT(cond,<sp/>section,<sp/>...)<sp/>if<sp/>(!(cond))<sp/>{<sp/>Shroon::Logger::LogFatalError(section,<sp/>Shroon::Logger::Format(__VA_ARGS__));<sp/>}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_REL_ERROR(...)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PG_REL_ASSERT(...)<sp/>PG_DEBUG_BREAK()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SHRN_REL_ASSERT(...)<sp/>SHRN_DEBUG_BREAK()</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacePeregrine" kindref="compound">Peregrine</ref></highlight></codeline>
+<codeline lineno="155"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceShroon" kindref="compound">Shroon</ref></highlight></codeline>
 <codeline lineno="156"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Logger</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacePeregrine_1_1Logger_1a56fdad18de42922ddac917e53df7eb13" kindref="member">SetOStream</ref>(std::ostream<sp/>&amp;<sp/>out);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceShroon_1_1Logger_1a5bedca55a64a8d427291bc1e1b636de6" kindref="member">SetOStream</ref>(std::ostream<sp/>&amp;<sp/>out);</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">LogInfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">LogInfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
 <codeline lineno="184"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">LogWarning</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">LogWarning</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
 <codeline lineno="193"><highlight class="normal"></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">LogError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">LogError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">LogFatalError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">LogFatalError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>log);</highlight></codeline>
 <codeline lineno="212"><highlight class="normal"></highlight></codeline>
 <codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="217"><highlight class="normal">}</highlight></codeline>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tostring_48',['ToString',['../group__FormatFunctions.html#gaba96d5b0d14029f0d9d6688a1391ec7b',1,'Peregrine::Logger']]]
+  ['tostring_48',['ToString',['../group__FormatFunctions.html#ga6357c147f5f92ed56459f2ca21c55af6',1,'Shroon::Logger']]]
 ];

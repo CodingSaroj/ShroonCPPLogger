@@ -4,13 +4,13 @@
     <compoundname>DebugLoggingMacros</compoundname>
     <title>DebugLoggingMacros</title>
       <sectiondef kind="define">
-      <memberdef kind="define" id="group__DebugLoggingMacros_1ga2fd1fd9fef3b7e267261c8fd1c825e75" prot="public" static="no">
-        <name>PG_INFO</name>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga082091eaa10a6b60b451943215478f33" prot="public" static="no">
+        <name>SHRN_INFO</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_INFO</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -18,13 +18,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="58" column="17" bodyfile="src/Logger.hpp" bodystart="58" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__DebugLoggingMacros_1gab84c05f86f8f35f0f7e3c2689d07a4fd" prot="public" static="no">
-        <name>PG_WARNING</name>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gac6e55d0d3fde8a23596097af946016bb" prot="public" static="no">
+        <name>SHRN_WARNING</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_WARNING</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -32,13 +32,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="68" column="17" bodyfile="src/Logger.hpp" bodystart="68" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__DebugLoggingMacros_1ga042fa3f79256fdf9939ff996507476aa" prot="public" static="no">
-        <name>PG_ERROR</name>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gaa56b2b717f17ee88a3db73d61841c832" prot="public" static="no">
+        <name>SHRN_ERROR</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -46,14 +46,14 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="78" column="17" bodyfile="src/Logger.hpp" bodystart="78" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__DebugLoggingMacros_1ga88e7b470c2599c8677c9f53fa0bd4690" prot="public" static="no">
-        <name>PG_ASSERT</name>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gad182fd7956a1a98ca160b082033f6d57" prot="public" static="no">
+        <name>SHRN_ASSERT</name>
         <param><defname>cond</defname></param>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
+        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

@@ -4,9 +4,9 @@
     <compoundname>FormatFunctions</compoundname>
     <title>FormatFunctions</title>
       <sectiondef kind="func">
-      <memberdef kind="function" id="group__FormatFunctions_1ga4746aa5b425063c44c95a435a2bbe29b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1gaf2c3d4dd71579dedd7a7112a35e2d187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::FormatBase</definition>
+        <definition>std::string Shroon::Logger::FormatBase</definition>
         <argsstring>(const std::string &amp;format, std::initializer_list&lt; std::string &gt; args)</argsstring>
         <name>FormatBase</name>
         <param>
@@ -46,9 +46,9 @@
         </inbodydescription>
         <location file="src/StringFormat.cpp" line="22" column="21" bodyfile="src/StringFormat.cpp" bodystart="22" bodyend="25" declfile="src/StringFormat.hpp" declline="49" declcolumn="21"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1gaf78092eebcc118b1222846b85d4511ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1ga2d629dfea0f535722b83c4b578930ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::FormatBase</definition>
+        <definition>std::string Shroon::Logger::FormatBase</definition>
         <argsstring>(std::string &amp;&amp;format, std::initializer_list&lt; std::string &gt; args)</argsstring>
         <name>FormatBase</name>
         <param>
@@ -88,7 +88,7 @@
         </inbodydescription>
         <location file="src/StringFormat.cpp" line="27" column="21" bodyfile="src/StringFormat.cpp" bodystart="27" bodyend="212" declfile="src/StringFormat.hpp" declline="59" declcolumn="21"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1gaba96d5b0d14029f0d9d6688a1391ec7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1ga6357c147f5f92ed56459f2ca21c55af6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename Type</type>
@@ -100,7 +100,7 @@
           </param>
         </templateparamlist>
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::ToString</definition>
+        <definition>std::string Shroon::Logger::ToString</definition>
         <argsstring>(const Type &amp;t, IOSFlagTypes... flags)</argsstring>
         <name>ToString</name>
         <param>
@@ -157,7 +157,7 @@
         </inbodydescription>
         <location file="src/StringFormat.hpp" line="73" column="28" bodyfile="src/StringFormat.hpp" bodystart="73" bodyend="79"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -166,7 +166,7 @@
           </param>
         </templateparamlist>
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::Format</definition>
+        <definition>std::string Shroon::Logger::Format</definition>
         <argsstring>(const std::string &amp;format, Args... args)</argsstring>
         <name>Format</name>
         <param>
@@ -206,7 +206,7 @@
         </inbodydescription>
         <location file="src/StringFormat.hpp" line="90" column="21" bodyfile="src/StringFormat.hpp" bodystart="90" bodyend="96"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1gac491104914ee0709ddb89714db3df1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1ga95382785ae66ce6f2fedd4d69ee00d27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -215,7 +215,7 @@
           </param>
         </templateparamlist>
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::Format</definition>
+        <definition>std::string Shroon::Logger::Format</definition>
         <argsstring>(std::string &amp;&amp;format, Args... args)</argsstring>
         <name>Format</name>
         <param>

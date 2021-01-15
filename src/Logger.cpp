@@ -19,7 +19,7 @@
     #include <windows.h>
 #endif
 
-namespace Peregrine
+namespace Shroon
 {
     namespace Logger
     {
@@ -116,7 +116,7 @@ namespace Peregrine
 
             std::cerr<<Format("{cgrnbx}[{}]{credbx}Error::{}: {}{cwhtxx}\n", "", GetTimestamp(), "", section, log, "");
 
-            PG_DEBUG_BREAK();
+            SHRN_DEBUG_BREAK();
         }
     }
 }

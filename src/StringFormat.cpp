@@ -15,7 +15,7 @@
  */
 #include "StringFormat.hpp"
 
-namespace Peregrine
+namespace Shroon
 {
     namespace Logger
     {

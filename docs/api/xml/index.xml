@@ -1,42 +1,42 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
-  <compound refid="namespacePeregrine" kind="namespace"><name>Peregrine</name>
+  <compound refid="namespaceShroon" kind="namespace"><name>Shroon</name>
   </compound>
-  <compound refid="namespacePeregrine_1_1Logger" kind="namespace"><name>Peregrine::Logger</name>
-    <member refid="namespacePeregrine_1_1Logger_1a7807980a583b25ca9842144e5653405e" kind="variable"><name>s_Out</name></member>
-    <member refid="namespacePeregrine_1_1Logger_1a19311159e53bf6236f0baf0d1b5cf979" kind="variable"><name>s_StartTime</name></member>
-    <member refid="namespacePeregrine_1_1Logger_1a23fccd37b55945e0c94f78722121c7e1" kind="function"><name>GetTimestamp</name></member>
-    <member refid="namespacePeregrine_1_1Logger_1a56fdad18de42922ddac917e53df7eb13" kind="function"><name>SetOStream</name></member>
-    <member refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kind="function"><name>LogInfo</name></member>
-    <member refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kind="function"><name>LogWarning</name></member>
-    <member refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kind="function"><name>LogError</name></member>
-    <member refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kind="function"><name>LogFatalError</name></member>
-    <member refid="group__FormatFunctions_1ga4746aa5b425063c44c95a435a2bbe29b" kind="function"><name>FormatBase</name></member>
-    <member refid="group__FormatFunctions_1gaf78092eebcc118b1222846b85d4511ac" kind="function"><name>FormatBase</name></member>
-    <member refid="group__FormatFunctions_1gaba96d5b0d14029f0d9d6688a1391ec7b" kind="function"><name>ToString</name></member>
-    <member refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kind="function"><name>Format</name></member>
-    <member refid="group__FormatFunctions_1gac491104914ee0709ddb89714db3df1e7" kind="function"><name>Format</name></member>
+  <compound refid="namespaceShroon_1_1Logger" kind="namespace"><name>Shroon::Logger</name>
+    <member refid="namespaceShroon_1_1Logger_1a5365a64c6344e75d54a0771ef99051ee" kind="variable"><name>s_Out</name></member>
+    <member refid="namespaceShroon_1_1Logger_1a854089766b7fe5580bae8658a9d84b07" kind="variable"><name>s_StartTime</name></member>
+    <member refid="namespaceShroon_1_1Logger_1acd79aad2432bb3a5065af22154cccb54" kind="function"><name>GetTimestamp</name></member>
+    <member refid="namespaceShroon_1_1Logger_1a5bedca55a64a8d427291bc1e1b636de6" kind="function"><name>SetOStream</name></member>
+    <member refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kind="function"><name>LogInfo</name></member>
+    <member refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kind="function"><name>LogWarning</name></member>
+    <member refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kind="function"><name>LogError</name></member>
+    <member refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kind="function"><name>LogFatalError</name></member>
+    <member refid="group__FormatFunctions_1gaf2c3d4dd71579dedd7a7112a35e2d187" kind="function"><name>FormatBase</name></member>
+    <member refid="group__FormatFunctions_1ga2d629dfea0f535722b83c4b578930ef1" kind="function"><name>FormatBase</name></member>
+    <member refid="group__FormatFunctions_1ga6357c147f5f92ed56459f2ca21c55af6" kind="function"><name>ToString</name></member>
+    <member refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kind="function"><name>Format</name></member>
+    <member refid="group__FormatFunctions_1ga95382785ae66ce6f2fedd4d69ee00d27" kind="function"><name>Format</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="Logger_8cpp" kind="file"><name>Logger.cpp</name>
   </compound>
   <compound refid="Logger_8hpp" kind="file"><name>Logger.hpp</name>
-    <member refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kind="define"><name>PG_DEBUG_BREAK</name></member>
-    <member refid="group__DebugLoggingMacros_1ga2fd1fd9fef3b7e267261c8fd1c825e75" kind="define"><name>PG_INFO</name></member>
-    <member refid="group__DebugLoggingMacros_1gab84c05f86f8f35f0f7e3c2689d07a4fd" kind="define"><name>PG_WARNING</name></member>
-    <member refid="group__DebugLoggingMacros_1ga042fa3f79256fdf9939ff996507476aa" kind="define"><name>PG_ERROR</name></member>
-    <member refid="group__DebugLoggingMacros_1ga88e7b470c2599c8677c9f53fa0bd4690" kind="define"><name>PG_ASSERT</name></member>
-    <member refid="group__ReleaseLoggingMacros_1ga5de83acc860b956760863900f7979b30" kind="define"><name>PG_REL_INFO</name></member>
-    <member refid="group__ReleaseLoggingMacros_1gace89a6174c7de1a4059a45db9d3c0004" kind="define"><name>PG_REL_WARNING</name></member>
-    <member refid="group__ReleaseLoggingMacros_1ga1380f65dcae1a6dc775fbcf728b7eb95" kind="define"><name>PG_REL_ERROR</name></member>
-    <member refid="group__ReleaseLoggingMacros_1gae41fd449f2add14de11c1ba3000c7cc0" kind="define"><name>PG_REL_ASSERT</name></member>
+    <member refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kind="define"><name>SHRN_DEBUG_BREAK</name></member>
+    <member refid="group__DebugLoggingMacros_1ga082091eaa10a6b60b451943215478f33" kind="define"><name>SHRN_INFO</name></member>
+    <member refid="group__DebugLoggingMacros_1gac6e55d0d3fde8a23596097af946016bb" kind="define"><name>SHRN_WARNING</name></member>
+    <member refid="group__DebugLoggingMacros_1gaa56b2b717f17ee88a3db73d61841c832" kind="define"><name>SHRN_ERROR</name></member>
+    <member refid="group__DebugLoggingMacros_1gad182fd7956a1a98ca160b082033f6d57" kind="define"><name>SHRN_ASSERT</name></member>
+    <member refid="group__ReleaseLoggingMacros_1ga5ed54637e55a99cc8dae71d38a0e06f8" kind="define"><name>SHRN_REL_INFO</name></member>
+    <member refid="group__ReleaseLoggingMacros_1ga7630f02b8fe937d2eca788af90d81c98" kind="define"><name>SHRN_REL_WARNING</name></member>
+    <member refid="group__ReleaseLoggingMacros_1ga7b8152bf3365a23b956b6633402a5950" kind="define"><name>SHRN_REL_ERROR</name></member>
+    <member refid="group__ReleaseLoggingMacros_1gacbd93347f4705e2449336faaf932894c" kind="define"><name>SHRN_REL_ASSERT</name></member>
   </compound>
   <compound refid="LogLevels_8hpp" kind="file"><name>LogLevels.hpp</name>
-    <member refid="group__LogLevel_1ga34479ce7fd8b296a48e0ed8f4909edd9" kind="define"><name>PG_LOG_LEVEL_INFO</name></member>
-    <member refid="group__LogLevel_1gaad2bcbd1c9d9a6a26e6e5c402aada287" kind="define"><name>PG_LOG_LEVEL_WARNING</name></member>
-    <member refid="group__LogLevel_1gaddb2e6e148de63f723301f2d1a3be296" kind="define"><name>PG_LOG_LEVEL_ERROR</name></member>
-    <member refid="group__LogLevel_1ga74340620d69f3b0e33ab22477ca8b213" kind="define"><name>PG_LOG_LEVEL_NO_LOG</name></member>
+    <member refid="group__LogLevel_1gadd78921bd3f4fc7143c6ff8d7cbe5759" kind="define"><name>SHRN_LOG_LEVEL_INFO</name></member>
+    <member refid="group__LogLevel_1ga7109912577d5d5bfdc14e91e9f83a1a3" kind="define"><name>SHRN_LOG_LEVEL_WARNING</name></member>
+    <member refid="group__LogLevel_1ga2d38a69546a4610040709a83fb2a1421" kind="define"><name>SHRN_LOG_LEVEL_ERROR</name></member>
+    <member refid="group__LogLevel_1gab26bae9e541280dfe2fbca3306fd520e" kind="define"><name>SHRN_LOG_LEVEL_NO_LOG</name></member>
   </compound>
   <compound refid="StringFormat_8cpp" kind="file"><name>StringFormat.cpp</name>
   </compound>
@@ -45,35 +45,35 @@
   <compound refid="group__LoggingMacros" kind="group"><name>LoggingMacros</name>
   </compound>
   <compound refid="group__DebugLoggingMacros" kind="group"><name>DebugLoggingMacros</name>
-    <member refid="group__DebugLoggingMacros_1ga2fd1fd9fef3b7e267261c8fd1c825e75" kind="define"><name>PG_INFO</name></member>
-    <member refid="group__DebugLoggingMacros_1gab84c05f86f8f35f0f7e3c2689d07a4fd" kind="define"><name>PG_WARNING</name></member>
-    <member refid="group__DebugLoggingMacros_1ga042fa3f79256fdf9939ff996507476aa" kind="define"><name>PG_ERROR</name></member>
-    <member refid="group__DebugLoggingMacros_1ga88e7b470c2599c8677c9f53fa0bd4690" kind="define"><name>PG_ASSERT</name></member>
+    <member refid="group__DebugLoggingMacros_1ga082091eaa10a6b60b451943215478f33" kind="define"><name>SHRN_INFO</name></member>
+    <member refid="group__DebugLoggingMacros_1gac6e55d0d3fde8a23596097af946016bb" kind="define"><name>SHRN_WARNING</name></member>
+    <member refid="group__DebugLoggingMacros_1gaa56b2b717f17ee88a3db73d61841c832" kind="define"><name>SHRN_ERROR</name></member>
+    <member refid="group__DebugLoggingMacros_1gad182fd7956a1a98ca160b082033f6d57" kind="define"><name>SHRN_ASSERT</name></member>
   </compound>
   <compound refid="group__ReleaseLoggingMacros" kind="group"><name>ReleaseLoggingMacros</name>
-    <member refid="group__ReleaseLoggingMacros_1ga5de83acc860b956760863900f7979b30" kind="define"><name>PG_REL_INFO</name></member>
-    <member refid="group__ReleaseLoggingMacros_1gace89a6174c7de1a4059a45db9d3c0004" kind="define"><name>PG_REL_WARNING</name></member>
-    <member refid="group__ReleaseLoggingMacros_1ga1380f65dcae1a6dc775fbcf728b7eb95" kind="define"><name>PG_REL_ERROR</name></member>
-    <member refid="group__ReleaseLoggingMacros_1gae41fd449f2add14de11c1ba3000c7cc0" kind="define"><name>PG_REL_ASSERT</name></member>
+    <member refid="group__ReleaseLoggingMacros_1ga5ed54637e55a99cc8dae71d38a0e06f8" kind="define"><name>SHRN_REL_INFO</name></member>
+    <member refid="group__ReleaseLoggingMacros_1ga7630f02b8fe937d2eca788af90d81c98" kind="define"><name>SHRN_REL_WARNING</name></member>
+    <member refid="group__ReleaseLoggingMacros_1ga7b8152bf3365a23b956b6633402a5950" kind="define"><name>SHRN_REL_ERROR</name></member>
+    <member refid="group__ReleaseLoggingMacros_1gacbd93347f4705e2449336faaf932894c" kind="define"><name>SHRN_REL_ASSERT</name></member>
   </compound>
   <compound refid="group__LoggingFunctions" kind="group"><name>LoggingFunctions</name>
-    <member refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kind="function"><name>LogInfo</name></member>
-    <member refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kind="function"><name>LogWarning</name></member>
-    <member refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kind="function"><name>LogError</name></member>
-    <member refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kind="function"><name>LogFatalError</name></member>
+    <member refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kind="function"><name>LogInfo</name></member>
+    <member refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kind="function"><name>LogWarning</name></member>
+    <member refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kind="function"><name>LogError</name></member>
+    <member refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kind="function"><name>LogFatalError</name></member>
   </compound>
   <compound refid="group__LogLevel" kind="group"><name>LogLevel</name>
-    <member refid="group__LogLevel_1ga34479ce7fd8b296a48e0ed8f4909edd9" kind="define"><name>PG_LOG_LEVEL_INFO</name></member>
-    <member refid="group__LogLevel_1gaad2bcbd1c9d9a6a26e6e5c402aada287" kind="define"><name>PG_LOG_LEVEL_WARNING</name></member>
-    <member refid="group__LogLevel_1gaddb2e6e148de63f723301f2d1a3be296" kind="define"><name>PG_LOG_LEVEL_ERROR</name></member>
-    <member refid="group__LogLevel_1ga74340620d69f3b0e33ab22477ca8b213" kind="define"><name>PG_LOG_LEVEL_NO_LOG</name></member>
+    <member refid="group__LogLevel_1gadd78921bd3f4fc7143c6ff8d7cbe5759" kind="define"><name>SHRN_LOG_LEVEL_INFO</name></member>
+    <member refid="group__LogLevel_1ga7109912577d5d5bfdc14e91e9f83a1a3" kind="define"><name>SHRN_LOG_LEVEL_WARNING</name></member>
+    <member refid="group__LogLevel_1ga2d38a69546a4610040709a83fb2a1421" kind="define"><name>SHRN_LOG_LEVEL_ERROR</name></member>
+    <member refid="group__LogLevel_1gab26bae9e541280dfe2fbca3306fd520e" kind="define"><name>SHRN_LOG_LEVEL_NO_LOG</name></member>
   </compound>
   <compound refid="group__FormatFunctions" kind="group"><name>FormatFunctions</name>
-    <member refid="group__FormatFunctions_1ga4746aa5b425063c44c95a435a2bbe29b" kind="function"><name>FormatBase</name></member>
-    <member refid="group__FormatFunctions_1gaf78092eebcc118b1222846b85d4511ac" kind="function"><name>FormatBase</name></member>
-    <member refid="group__FormatFunctions_1gaba96d5b0d14029f0d9d6688a1391ec7b" kind="function"><name>ToString</name></member>
-    <member refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kind="function"><name>Format</name></member>
-    <member refid="group__FormatFunctions_1gac491104914ee0709ddb89714db3df1e7" kind="function"><name>Format</name></member>
+    <member refid="group__FormatFunctions_1gaf2c3d4dd71579dedd7a7112a35e2d187" kind="function"><name>FormatBase</name></member>
+    <member refid="group__FormatFunctions_1ga2d629dfea0f535722b83c4b578930ef1" kind="function"><name>FormatBase</name></member>
+    <member refid="group__FormatFunctions_1ga6357c147f5f92ed56459f2ca21c55af6" kind="function"><name>ToString</name></member>
+    <member refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kind="function"><name>Format</name></member>
+    <member refid="group__FormatFunctions_1ga95382785ae66ce6f2fedd4d69ee00d27" kind="function"><name>Format</name></member>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

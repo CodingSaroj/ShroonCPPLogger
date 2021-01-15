@@ -4,13 +4,13 @@
     <compoundname>ReleaseLoggingMacros</compoundname>
     <title>ReleaseLoggingMacros</title>
       <sectiondef kind="define">
-      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga5de83acc860b956760863900f7979b30" prot="public" static="no">
-        <name>PG_REL_INFO</name>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga5ed54637e55a99cc8dae71d38a0e06f8" prot="public" static="no">
+        <name>SHRN_REL_INFO</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__))</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" kindref="member">Peregrine::Logger::LogInfo()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_INFO</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo()</ref></computeroutput> when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_INFO</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -18,13 +18,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="114" column="13" bodyfile="src/Logger.hpp" bodystart="114" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__ReleaseLoggingMacros_1gace89a6174c7de1a4059a45db9d3c0004" prot="public" static="no">
-        <name>PG_REL_WARNING</name>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga7630f02b8fe937d2eca788af90d81c98" prot="public" static="no">
+        <name>SHRN_REL_WARNING</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__))</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" kindref="member">Peregrine::Logger::LogWarning()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_WARNING</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning()</ref></computeroutput> when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_WARNING</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -32,13 +32,13 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="124" column="13" bodyfile="src/Logger.hpp" bodystart="124" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga1380f65dcae1a6dc775fbcf728b7eb95" prot="public" static="no">
-        <name>PG_REL_ERROR</name>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1ga7b8152bf3365a23b956b6633402a5950" prot="public" static="no">
+        <name>SHRN_REL_ERROR</name>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__))</initializer>
+        <initializer><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__))</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" kindref="member">Peregrine::Logger::LogError()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError()</ref></computeroutput> when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -46,14 +46,14 @@
         </inbodydescription>
         <location file="src/Logger.hpp" line="134" column="13" bodyfile="src/Logger.hpp" bodystart="134" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__ReleaseLoggingMacros_1gae41fd449f2add14de11c1ba3000c7cc0" prot="public" static="no">
-        <name>PG_REL_ASSERT</name>
+      <memberdef kind="define" id="group__ReleaseLoggingMacros_1gacbd93347f4705e2449336faaf932894c" prot="public" static="no">
+        <name>SHRN_REL_ASSERT</name>
         <param><defname>cond</defname></param>
         <param><defname>section</defname></param>
         <param><defname>...</defname></param>
-        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" kindref="member">Peregrine::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
+        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
         <briefdescription>
-<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" kindref="member">Peregrine::Logger::LogFatalError()</ref></computeroutput> when <computeroutput>PG_LOG_LEVEL &gt;= PG_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError()</ref></computeroutput> when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

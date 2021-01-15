@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['releaseloggingmacros_29',['ReleaseLoggingMacros',['../group__ReleaseLoggingMacros.html',1,'']]]
+  ['logger_15',['Logger',['../namespaceShroon_1_1Logger.html',1,'Shroon']]],
+  ['setostream_16',['SetOStream',['../namespaceShroon_1_1Logger.html#a5bedca55a64a8d427291bc1e1b636de6',1,'Shroon::Logger']]],
+  ['shrn_5fassert_17',['SHRN_ASSERT',['../group__DebugLoggingMacros.html#gad182fd7956a1a98ca160b082033f6d57',1,'Logger.hpp']]],
+  ['shrn_5fdebug_5fbreak_18',['SHRN_DEBUG_BREAK',['../Logger_8hpp.html#a42d23c919dac4b9c2ef85648fcd22c31',1,'Logger.hpp']]],
+  ['shrn_5ferror_19',['SHRN_ERROR',['../group__DebugLoggingMacros.html#gaa56b2b717f17ee88a3db73d61841c832',1,'Logger.hpp']]],
+  ['shrn_5finfo_20',['SHRN_INFO',['../group__DebugLoggingMacros.html#ga082091eaa10a6b60b451943215478f33',1,'Logger.hpp']]],
+  ['shrn_5flog_5flevel_5ferror_21',['SHRN_LOG_LEVEL_ERROR',['../group__LogLevel.html#ga2d38a69546a4610040709a83fb2a1421',1,'LogLevels.hpp']]],
+  ['shrn_5flog_5flevel_5finfo_22',['SHRN_LOG_LEVEL_INFO',['../group__LogLevel.html#gadd78921bd3f4fc7143c6ff8d7cbe5759',1,'LogLevels.hpp']]],
+  ['shrn_5flog_5flevel_5fno_5flog_23',['SHRN_LOG_LEVEL_NO_LOG',['../group__LogLevel.html#gab26bae9e541280dfe2fbca3306fd520e',1,'LogLevels.hpp']]],
+  ['shrn_5flog_5flevel_5fwarning_24',['SHRN_LOG_LEVEL_WARNING',['../group__LogLevel.html#ga7109912577d5d5bfdc14e91e9f83a1a3',1,'LogLevels.hpp']]],
+  ['shrn_5frel_5fassert_25',['SHRN_REL_ASSERT',['../group__ReleaseLoggingMacros.html#gacbd93347f4705e2449336faaf932894c',1,'Logger.hpp']]],
+  ['shrn_5frel_5ferror_26',['SHRN_REL_ERROR',['../group__ReleaseLoggingMacros.html#ga7b8152bf3365a23b956b6633402a5950',1,'Logger.hpp']]],
+  ['shrn_5frel_5finfo_27',['SHRN_REL_INFO',['../group__ReleaseLoggingMacros.html#ga5ed54637e55a99cc8dae71d38a0e06f8',1,'Logger.hpp']]],
+  ['shrn_5frel_5fwarning_28',['SHRN_REL_WARNING',['../group__ReleaseLoggingMacros.html#ga7630f02b8fe937d2eca788af90d81c98',1,'Logger.hpp']]],
+  ['shrn_5fwarning_29',['SHRN_WARNING',['../group__DebugLoggingMacros.html#gac6e55d0d3fde8a23596097af946016bb',1,'Logger.hpp']]],
+  ['shroon_30',['Shroon',['../namespaceShroon.html',1,'']]],
+  ['stringformat_2ecpp_31',['StringFormat.cpp',['../StringFormat_8cpp.html',1,'']]],
+  ['stringformat_2ehpp_32',['StringFormat.hpp',['../StringFormat_8hpp.html',1,'']]]
 ];

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
-  <compounddef id="namespacePeregrine_1_1Logger" kind="namespace" language="C++">
-    <compoundname>Peregrine::Logger</compoundname>
+  <compounddef id="namespaceShroon_1_1Logger" kind="namespace" language="C++">
+    <compoundname>Shroon::Logger</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="namespacePeregrine_1_1Logger_1a7807980a583b25ca9842144e5653405e" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="namespaceShroon_1_1Logger_1a5365a64c6344e75d54a0771ef99051ee" prot="public" static="yes" mutable="no">
         <type>std::ostream *</type>
-        <definition>std::ostream* Peregrine::Logger::s_Out</definition>
+        <definition>std::ostream* Shroon::Logger::s_Out</definition>
         <argsstring></argsstring>
         <name>s_Out</name>
         <initializer>= &amp;std::cout</initializer>
@@ -17,9 +17,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="31" column="30" bodyfile="src/Logger.cpp" bodystart="31" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespacePeregrine_1_1Logger_1a19311159e53bf6236f0baf0d1b5cf979" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="namespaceShroon_1_1Logger_1a854089766b7fe5580bae8658a9d84b07" prot="public" static="yes" mutable="no">
         <type>const double</type>
-        <definition>const double Peregrine::Logger::s_StartTime</definition>
+        <definition>const double Shroon::Logger::s_StartTime</definition>
         <argsstring></argsstring>
         <name>s_StartTime</name>
         <initializer>= std::chrono::system_clock::now().time_since_epoch().count() / 1000000.0</initializer>
@@ -33,9 +33,9 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacePeregrine_1_1Logger_1a23fccd37b55945e0c94f78722121c7e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceShroon_1_1Logger_1acd79aad2432bb3a5065af22154cccb54" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
-        <definition>static std::string Peregrine::Logger::GetTimestamp</definition>
+        <definition>static std::string Shroon::Logger::GetTimestamp</definition>
         <argsstring>()</argsstring>
         <name>GetTimestamp</name>
         <briefdescription>
@@ -46,9 +46,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="54" column="28" bodyfile="src/Logger.cpp" bodystart="54" bodyend="59"/>
       </memberdef>
-      <memberdef kind="function" id="namespacePeregrine_1_1Logger_1a56fdad18de42922ddac917e53df7eb13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceShroon_1_1Logger_1a5bedca55a64a8d427291bc1e1b636de6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::SetOStream</definition>
+        <definition>void Shroon::Logger::SetOStream</definition>
         <argsstring>(std::ostream &amp;out)</argsstring>
         <name>SetOStream</name>
         <param>
@@ -74,9 +74,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="61" column="14" bodyfile="src/Logger.cpp" bodystart="61" bodyend="64" declfile="src/Logger.hpp" declline="168" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::LogInfo</definition>
+        <definition>void Shroon::Logger::LogInfo</definition>
         <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
         <name>LogInfo</name>
         <param>
@@ -116,9 +116,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="66" column="14" bodyfile="src/Logger.cpp" bodystart="66" bodyend="78" declfile="src/Logger.hpp" declline="183" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::LogWarning</definition>
+        <definition>void Shroon::Logger::LogWarning</definition>
         <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
         <name>LogWarning</name>
         <param>
@@ -158,9 +158,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="80" column="14" bodyfile="src/Logger.cpp" bodystart="80" bodyend="92" declfile="src/Logger.hpp" declline="192" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::LogError</definition>
+        <definition>void Shroon::Logger::LogError</definition>
         <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
         <name>LogError</name>
         <param>
@@ -200,9 +200,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="94" column="14" bodyfile="src/Logger.cpp" bodystart="94" bodyend="106" declfile="src/Logger.hpp" declline="201" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::LogFatalError</definition>
+        <definition>void Shroon::Logger::LogFatalError</definition>
         <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
         <name>LogFatalError</name>
         <param>
@@ -217,7 +217,7 @@
 <para>Logs data with level <computeroutput>Error</computeroutput> to the output stream in the format:<linebreak/>
 <blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Red)Error(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput><linebreak/>
 </para>
-</blockquote>and performs a <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+</blockquote>and performs a <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -243,9 +243,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="108" column="14" bodyfile="src/Logger.cpp" bodystart="108" bodyend="120" declfile="src/Logger.hpp" declline="211" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1ga4746aa5b425063c44c95a435a2bbe29b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1gaf2c3d4dd71579dedd7a7112a35e2d187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::FormatBase</definition>
+        <definition>std::string Shroon::Logger::FormatBase</definition>
         <argsstring>(const std::string &amp;format, std::initializer_list&lt; std::string &gt; args)</argsstring>
         <name>FormatBase</name>
         <param>
@@ -285,9 +285,9 @@
         </inbodydescription>
         <location file="src/StringFormat.cpp" line="22" column="21" bodyfile="src/StringFormat.cpp" bodystart="22" bodyend="25" declfile="src/StringFormat.hpp" declline="49" declcolumn="21"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1gaf78092eebcc118b1222846b85d4511ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1ga2d629dfea0f535722b83c4b578930ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::FormatBase</definition>
+        <definition>std::string Shroon::Logger::FormatBase</definition>
         <argsstring>(std::string &amp;&amp;format, std::initializer_list&lt; std::string &gt; args)</argsstring>
         <name>FormatBase</name>
         <param>
@@ -327,7 +327,7 @@
         </inbodydescription>
         <location file="src/StringFormat.cpp" line="27" column="21" bodyfile="src/StringFormat.cpp" bodystart="27" bodyend="212" declfile="src/StringFormat.hpp" declline="59" declcolumn="21"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1gaba96d5b0d14029f0d9d6688a1391ec7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1ga6357c147f5f92ed56459f2ca21c55af6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename Type</type>
@@ -339,7 +339,7 @@
           </param>
         </templateparamlist>
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::ToString</definition>
+        <definition>std::string Shroon::Logger::ToString</definition>
         <argsstring>(const Type &amp;t, IOSFlagTypes... flags)</argsstring>
         <name>ToString</name>
         <param>
@@ -396,7 +396,7 @@
         </inbodydescription>
         <location file="src/StringFormat.hpp" line="73" column="28" bodyfile="src/StringFormat.hpp" bodystart="73" bodyend="79"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1ga9ac577b41cb7c2f48a9d1c910a9d9f98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -405,7 +405,7 @@
           </param>
         </templateparamlist>
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::Format</definition>
+        <definition>std::string Shroon::Logger::Format</definition>
         <argsstring>(const std::string &amp;format, Args... args)</argsstring>
         <name>Format</name>
         <param>
@@ -445,7 +445,7 @@
         </inbodydescription>
         <location file="src/StringFormat.hpp" line="90" column="21" bodyfile="src/StringFormat.hpp" bodystart="90" bodyend="96"/>
       </memberdef>
-      <memberdef kind="function" id="group__FormatFunctions_1gac491104914ee0709ddb89714db3df1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__FormatFunctions_1ga95382785ae66ce6f2fedd4d69ee00d27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -454,7 +454,7 @@
           </param>
         </templateparamlist>
         <type>std::string</type>
-        <definition>std::string Peregrine::Logger::Format</definition>
+        <definition>std::string Shroon::Logger::Format</definition>
         <argsstring>(std::string &amp;&amp;format, Args... args)</argsstring>
         <name>Format</name>
         <param>
@@ -496,7 +496,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>The namespace in which all the PeregrineCPPLogger API other than macros exists. </para>
+<para>The namespace in which all the ShroonCPPLogger API other than macros exists. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

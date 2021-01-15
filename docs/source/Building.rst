@@ -12,16 +12,16 @@ If the project in which you want to link this library also uses CMake then using
 
 .. code-block::
 
-    set(PeregrineCPPLogger_DIR "<path to project root of library>")
-    find_package(PeregrineCPPLogger 1.0)
+    set(ShroonCPPLogger_DIR "<path to project root of library>")
+    find_package(ShroonCPPLogger 1.0)
     
     ...
     
     # Add the include directories
-    target_include_directories(<YourTarget> [PUBLIC|PRIVATE] PeregrineCPPLogger_INCLUDE_DIRS)
+    target_include_directories(<YourTarget> [PUBLIC|PRIVATE] ShroonCPPLogger_INCLUDE_DIRS)
     
     # Link the output library to <YourTarget>
-    target_link_libraries(<YourTarget> PeregrineCPPLogger::PeregrineCPPLogger)
+    target_link_libraries(<YourTarget> ShroonCPPLogger::ShroonCPPLogger)
 
 CMake options
 -------------
@@ -29,8 +29,8 @@ CMake options
 These options are passed to cmake as ``-D<option_name>=<value>``.
 
 * **CMAKE_BUILD_TYPE**: What configuration to use while building. Refer to `this <https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html>`_ for possiblevalues for ``<config>``. It is set to ``Release`` by default.
-* **PG_CPP_LOGGER_BUILD_EXAMPLE**: Whether to build examples or not. Either ``ON`` or ``OFF``. ``OFF`` by default.
-* **PG_CPP_LOGGER_BUILD_DOCS**: Whether to build doxygen docs or not. Outputs in HTML and XML formats. Either ``ON`` or ``OFF``. ``OFF`` by default.
+* **SHRN_CPP_LOGGER_BUILD_EXAMPLE**: Whether to build examples or not. Either ``ON`` or ``OFF``. ``OFF`` by default.
+* **SHRN_CPP_LOGGER_BUILD_DOCS**: Whether to build doxygen docs or not. Outputs in HTML and XML formats. Either ``ON`` or ``OFF``. ``OFF`` by default.
 
 Windows
 -------

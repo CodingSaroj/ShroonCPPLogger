@@ -22,8 +22,8 @@
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
-      <memberdef kind="define" id="group__LogLevel_1ga34479ce7fd8b296a48e0ed8f4909edd9" prot="public" static="no">
-        <name>PG_LOG_LEVEL_INFO</name>
+      <memberdef kind="define" id="group__LogLevel_1gadd78921bd3f4fc7143c6ff8d7cbe5759" prot="public" static="no">
+        <name>SHRN_LOG_LEVEL_INFO</name>
         <initializer>3</initializer>
         <briefdescription>
 <para>Allows logs of level Info, Warning and Error. </para>
@@ -34,8 +34,8 @@
         </inbodydescription>
         <location file="src/LogLevels.hpp" line="25" column="9" bodyfile="src/LogLevels.hpp" bodystart="25" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__LogLevel_1gaad2bcbd1c9d9a6a26e6e5c402aada287" prot="public" static="no">
-        <name>PG_LOG_LEVEL_WARNING</name>
+      <memberdef kind="define" id="group__LogLevel_1ga7109912577d5d5bfdc14e91e9f83a1a3" prot="public" static="no">
+        <name>SHRN_LOG_LEVEL_WARNING</name>
         <initializer>2</initializer>
         <briefdescription>
 <para>Allows logs of level Warning and Error. </para>
@@ -46,8 +46,8 @@
         </inbodydescription>
         <location file="src/LogLevels.hpp" line="26" column="9" bodyfile="src/LogLevels.hpp" bodystart="26" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__LogLevel_1gaddb2e6e148de63f723301f2d1a3be296" prot="public" static="no">
-        <name>PG_LOG_LEVEL_ERROR</name>
+      <memberdef kind="define" id="group__LogLevel_1ga2d38a69546a4610040709a83fb2a1421" prot="public" static="no">
+        <name>SHRN_LOG_LEVEL_ERROR</name>
         <initializer>1</initializer>
         <briefdescription>
 <para>Allows logs of level Error. </para>
@@ -58,8 +58,8 @@
         </inbodydescription>
         <location file="src/LogLevels.hpp" line="27" column="9" bodyfile="src/LogLevels.hpp" bodystart="27" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="group__LogLevel_1ga74340620d69f3b0e33ab22477ca8b213" prot="public" static="no">
-        <name>PG_LOG_LEVEL_NO_LOG</name>
+      <memberdef kind="define" id="group__LogLevel_1gab26bae9e541280dfe2fbca3306fd520e" prot="public" static="no">
+        <name>SHRN_LOG_LEVEL_NO_LOG</name>
         <initializer>0</initializer>
         <briefdescription>
 <para>Doesn&apos;t allow any logs. </para>
@@ -93,10 +93,10 @@
 <codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25" refid="group__LogLevel_1ga34479ce7fd8b296a48e0ed8f4909edd9" refkind="member"><highlight class="preprocessor">#define<sp/>PG_LOG_LEVEL_INFO<sp/>3<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="26" refid="group__LogLevel_1gaad2bcbd1c9d9a6a26e6e5c402aada287" refkind="member"><highlight class="preprocessor">#define<sp/>PG_LOG_LEVEL_WARNING<sp/>2<sp/><sp/></highlight></codeline>
-<codeline lineno="27" refid="group__LogLevel_1gaddb2e6e148de63f723301f2d1a3be296" refkind="member"><highlight class="preprocessor">#define<sp/>PG_LOG_LEVEL_ERROR<sp/>1<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="28" refid="group__LogLevel_1ga74340620d69f3b0e33ab22477ca8b213" refkind="member"><highlight class="preprocessor">#define<sp/>PG_LOG_LEVEL_NO_LOG<sp/>0<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="group__LogLevel_1gadd78921bd3f4fc7143c6ff8d7cbe5759" refkind="member"><highlight class="preprocessor">#define<sp/>SHRN_LOG_LEVEL_INFO<sp/>3<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="group__LogLevel_1ga7109912577d5d5bfdc14e91e9f83a1a3" refkind="member"><highlight class="preprocessor">#define<sp/>SHRN_LOG_LEVEL_WARNING<sp/>2<sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="group__LogLevel_1ga2d38a69546a4610040709a83fb2a1421" refkind="member"><highlight class="preprocessor">#define<sp/>SHRN_LOG_LEVEL_ERROR<sp/>1<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="group__LogLevel_1gab26bae9e541280dfe2fbca3306fd520e" refkind="member"><highlight class="preprocessor">#define<sp/>SHRN_LOG_LEVEL_NO_LOG<sp/>0<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
     </programlisting>

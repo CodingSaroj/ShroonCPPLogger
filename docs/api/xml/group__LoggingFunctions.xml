@@ -4,9 +4,9 @@
     <compoundname>LoggingFunctions</compoundname>
     <title>LoggingFunctions</title>
       <sectiondef kind="func">
-      <memberdef kind="function" id="group__LoggingFunctions_1ga7cfaed2952f6130399ae6b51e3f28cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::LogInfo</definition>
+        <definition>void Shroon::Logger::LogInfo</definition>
         <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
         <name>LogInfo</name>
         <param>
@@ -46,9 +46,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="66" column="14" bodyfile="src/Logger.cpp" bodystart="66" bodyend="78" declfile="src/Logger.hpp" declline="183" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="group__LoggingFunctions_1ga46d69303d4560d7adf123a03d379955c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::LogWarning</definition>
+        <definition>void Shroon::Logger::LogWarning</definition>
         <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
         <name>LogWarning</name>
         <param>
@@ -88,9 +88,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="80" column="14" bodyfile="src/Logger.cpp" bodystart="80" bodyend="92" declfile="src/Logger.hpp" declline="192" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="group__LoggingFunctions_1ga244d749906d71894884e172962ade386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::LogError</definition>
+        <definition>void Shroon::Logger::LogError</definition>
         <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
         <name>LogError</name>
         <param>
@@ -130,9 +130,9 @@
         </inbodydescription>
         <location file="src/Logger.cpp" line="94" column="14" bodyfile="src/Logger.cpp" bodystart="94" bodyend="106" declfile="src/Logger.hpp" declline="201" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="group__LoggingFunctions_1ga242442cc88876c549d61caf9ebe44667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Peregrine::Logger::LogFatalError</definition>
+        <definition>void Shroon::Logger::LogFatalError</definition>
         <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
         <name>LogFatalError</name>
         <param>
@@ -147,7 +147,7 @@
 <para>Logs data with level <computeroutput>Error</computeroutput> to the output stream in the format:<linebreak/>
 <blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Red)Error(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput><linebreak/>
 </para>
-</blockquote>and performs a <computeroutput><ref refid="Logger_8hpp_1a70c06aa50dcd152a64b5cdcc66e7bf5b" kindref="member">PG_DEBUG_BREAK()</ref></computeroutput>. </para>
+</blockquote>and performs a <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>

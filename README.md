@@ -1,18 +1,18 @@
-<img src="https://github.com/SarojKumar10/PeregrineCPPLogger/raw/master/logos/PergrineCPPLogger256x256.png">
+<img src="https://github.com/SarojKumar10/ShroonCPPLogger/raw/master/logos/ShroonCPPLogger256x256.png">
 
-# Peregrine C++ Logger
+# Shroon C++ Logger
 
 A simple logging library written in C++17.
 
 ## Building
 
-See the documentation page on [Building](https://peregrinecpplogger.readthedocs.io/en/latest/Building.html).
+See the documentation page on [Building](https://shrooncpplogger.readthedocs.io/en/latest/Building.html).
 
 ## Getting Started
 
-See the documentation page on [Getting Started](https://peregrinecpplogger.readthedocs.io/en/latest/GettingStarted.html).
+See the documentation page on [Getting Started](https://shrooncpplogger.readthedocs.io/en/latest/GettingStarted.html).
 
 ## Documentation and API Reference
 
-The documentation is found [here](https://peregrinecpplogger.readthedocs.io/en/latest/) and
-the API Reference is found [here](https://peregrinecpplogger.readthedocs.io/en/latest/APIReference.html).
+The documentation is found [here](https://shrooncpplogger.readthedocs.io/en/latest/) and
+the API Reference is found [here](https://shrooncpplogger.readthedocs.io/en/latest/APIReference.html).

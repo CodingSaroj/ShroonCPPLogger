@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Peregrine C++ Logger: src/StringFormat.hpp Source File</title>
+<title>Shroon C++ Logger: src/StringFormat.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Peregrine C++ Logger
+   <div id="projectname">Shroon C++ Logger
    </div>
   </td>
  </tr>
@@ -93,16 +93,16 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacePeregrine.html">Peregrine</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceShroon.html">Shroon</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">namespace </span>Logger</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::string <a class="code" href="group__FormatFunctions.html#ga4746aa5b425063c44c95a435a2bbe29b">FormatBase</a>(<span class="keyword">const</span> std::string &amp; format, std::initializer_list&lt;std::string&gt; args);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::string <a class="code" href="group__FormatFunctions.html#gaf2c3d4dd71579dedd7a7112a35e2d187">FormatBase</a>(<span class="keyword">const</span> std::string &amp; format, std::initializer_list&lt;std::string&gt; args);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::string <a class="code" href="group__FormatFunctions.html#ga4746aa5b425063c44c95a435a2bbe29b">FormatBase</a>(std::string &amp;&amp; format, std::initializer_list&lt;std::string&gt; args);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::string <a class="code" href="group__FormatFunctions.html#gaf2c3d4dd71579dedd7a7112a35e2d187">FormatBase</a>(std::string &amp;&amp; format, std::initializer_list&lt;std::string&gt; args);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type, <span class="keyword">typename</span>... IOSFlagTypes&gt;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="group__FormatFunctions.html#gaba96d5b0d14029f0d9d6688a1391ec7b">   73</a></span>&#160;        <span class="keyword">inline</span> std::string <a class="code" href="group__FormatFunctions.html#gaba96d5b0d14029f0d9d6688a1391ec7b">ToString</a>(<span class="keyword">const</span> Type &amp; t, IOSFlagTypes... flags)</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="group__FormatFunctions.html#ga6357c147f5f92ed56459f2ca21c55af6">   73</a></span>&#160;        <span class="keyword">inline</span> std::string <a class="code" href="group__FormatFunctions.html#ga6357c147f5f92ed56459f2ca21c55af6">ToString</a>(<span class="keyword">const</span> Type &amp; t, IOSFlagTypes... flags)</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            std::ostringstream out;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            ((out&lt;&lt;flags), ...);</div>
@@ -111,32 +111,32 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="group__FormatFunctions.html#ga9ac577b41cb7c2f48a9d1c910a9d9f98">   90</a></span>&#160;        std::string <a class="code" href="group__FormatFunctions.html#ga9ac577b41cb7c2f48a9d1c910a9d9f98">Format</a>(<span class="keyword">const</span> std::string &amp; format, Args... args)</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="group__FormatFunctions.html#gad02b243d822da3a7692c15daa8f7508f">   90</a></span>&#160;        std::string <a class="code" href="group__FormatFunctions.html#gad02b243d822da3a7692c15daa8f7508f">Format</a>(<span class="keyword">const</span> std::string &amp; format, Args... args)</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="group__FormatFunctions.html#ga4746aa5b425063c44c95a435a2bbe29b">FormatBase</a>(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="group__FormatFunctions.html#gaf2c3d4dd71579dedd7a7112a35e2d187">FormatBase</a>(</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                format,                         <span class="comment">// Pass the format string as is</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                {std::move(<a class="code" href="group__FormatFunctions.html#gaba96d5b0d14029f0d9d6688a1391ec7b">ToString</a>(args))...}  <span class="comment">// Expand argument pack to create an std::initializer_list of std::string returned by ToString.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                {std::move(<a class="code" href="group__FormatFunctions.html#ga6357c147f5f92ed56459f2ca21c55af6">ToString</a>(args))...}  <span class="comment">// Expand argument pack to create an std::initializer_list of std::string returned by ToString.</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            );</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="group__FormatFunctions.html#gac491104914ee0709ddb89714db3df1e7">  107</a></span>&#160;        std::string <a class="code" href="group__FormatFunctions.html#ga9ac577b41cb7c2f48a9d1c910a9d9f98">Format</a>(std::string &amp;&amp; format, Args... args)</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="group__FormatFunctions.html#ga95382785ae66ce6f2fedd4d69ee00d27">  107</a></span>&#160;        std::string <a class="code" href="group__FormatFunctions.html#gad02b243d822da3a7692c15daa8f7508f">Format</a>(std::string &amp;&amp; format, Args... args)</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            std::stringstream out;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="group__FormatFunctions.html#ga4746aa5b425063c44c95a435a2bbe29b">FormatBase</a>(</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="group__FormatFunctions.html#gaf2c3d4dd71579dedd7a7112a35e2d187">FormatBase</a>(</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                std::move(format),              <span class="comment">// Pass the format string as is</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                {std::move(<a class="code" href="group__FormatFunctions.html#gaba96d5b0d14029f0d9d6688a1391ec7b">ToString</a>(args))...}  <span class="comment">// Expand argument pack to create an std::initializer_list of std::string returned by ToString.</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                {std::move(<a class="code" href="group__FormatFunctions.html#ga6357c147f5f92ed56459f2ca21c55af6">ToString</a>(args))...}  <span class="comment">// Expand argument pack to create an std::initializer_list of std::string returned by ToString.</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            );</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="agroup__FormatFunctions_html_ga4746aa5b425063c44c95a435a2bbe29b"><div class="ttname"><a href="group__FormatFunctions.html#ga4746aa5b425063c44c95a435a2bbe29b">Peregrine::Logger::FormatBase</a></div><div class="ttdeci">std::string FormatBase(const std::string &amp;format, std::initializer_list&lt; std::string &gt; args)</div><div class="ttdoc">Outputs a string with all the &quot;{}&quot; replaced with each element in args inside format.</div><div class="ttdef"><b>Definition:</b> StringFormat.cpp:22</div></div>
-<div class="ttc" id="agroup__FormatFunctions_html_gaba96d5b0d14029f0d9d6688a1391ec7b"><div class="ttname"><a href="group__FormatFunctions.html#gaba96d5b0d14029f0d9d6688a1391ec7b">Peregrine::Logger::ToString</a></div><div class="ttdeci">std::string ToString(const Type &amp;t, IOSFlagTypes... flags)</div><div class="ttdoc">Converts variable of type Type to std::string using operator&lt;&lt;.</div><div class="ttdef"><b>Definition:</b> StringFormat.hpp:73</div></div>
-<div class="ttc" id="agroup__FormatFunctions_html_ga9ac577b41cb7c2f48a9d1c910a9d9f98"><div class="ttname"><a href="group__FormatFunctions.html#ga9ac577b41cb7c2f48a9d1c910a9d9f98">Peregrine::Logger::Format</a></div><div class="ttdeci">std::string Format(const std::string &amp;format, Args... args)</div><div class="ttdoc">Outputs a string with all the &quot;{}&quot; replaced with positional args inside format.</div><div class="ttdef"><b>Definition:</b> StringFormat.hpp:90</div></div>
-<div class="ttc" id="anamespacePeregrine_html"><div class="ttname"><a href="namespacePeregrine.html">Peregrine</a></div><div class="ttdoc">The namespace in which all the projects under Peregrine exist.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:22</div></div>
+<div class="ttc" id="agroup__FormatFunctions_html_gad02b243d822da3a7692c15daa8f7508f"><div class="ttname"><a href="group__FormatFunctions.html#gad02b243d822da3a7692c15daa8f7508f">Shroon::Logger::Format</a></div><div class="ttdeci">std::string Format(const std::string &amp;format, Args... args)</div><div class="ttdoc">Outputs a string with all the &quot;{}&quot; replaced with positional args inside format.</div><div class="ttdef"><b>Definition:</b> StringFormat.hpp:90</div></div>
+<div class="ttc" id="agroup__FormatFunctions_html_gaf2c3d4dd71579dedd7a7112a35e2d187"><div class="ttname"><a href="group__FormatFunctions.html#gaf2c3d4dd71579dedd7a7112a35e2d187">Shroon::Logger::FormatBase</a></div><div class="ttdeci">std::string FormatBase(const std::string &amp;format, std::initializer_list&lt; std::string &gt; args)</div><div class="ttdoc">Outputs a string with all the &quot;{}&quot; replaced with each element in args inside format.</div><div class="ttdef"><b>Definition:</b> StringFormat.cpp:22</div></div>
+<div class="ttc" id="anamespaceShroon_html"><div class="ttname"><a href="namespaceShroon.html">Shroon</a></div><div class="ttdoc">The namespace in which all the projects under Shroon exist.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:22</div></div>
+<div class="ttc" id="agroup__FormatFunctions_html_ga6357c147f5f92ed56459f2ca21c55af6"><div class="ttname"><a href="group__FormatFunctions.html#ga6357c147f5f92ed56459f2ca21c55af6">Shroon::Logger::ToString</a></div><div class="ttdeci">std::string ToString(const Type &amp;t, IOSFlagTypes... flags)</div><div class="ttdoc">Converts variable of type Type to std::string using operator&lt;&lt;.</div><div class="ttdef"><b>Definition:</b> StringFormat.hpp:73</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Peregrine C++ Logger'
+project = 'Shroon C++ Logger'
 copyright = '2020, Saroj Kumar'
 author = 'Saroj Kumar'
 
@@ -39,10 +39,10 @@ extensions = [
 ]
 
 breathe_projects = {
-    'Peregrine C++ Logger': '../api/xml/'
+    'Shroon C++ Logger': '../api/xml/'
 }
 
-breathe_default_project = 'Peregrine C++ Logger'
+breathe_default_project = 'Shroon C++ Logger'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

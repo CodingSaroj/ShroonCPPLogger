@@ -17,15 +17,15 @@
 
 /**
  * @defgroup LogLevel
- * This group contains all possible values for \p PG_LOG_LEVEL. The default value
- * is PG_LOG_LEVEL_INFO i.e. 3.
+ * This group contains all possible values for \p SHRN_LOG_LEVEL. The default value
+ * is SHRN_LOG_LEVEL_INFO i.e. 3.
  * @{
  */
 
-#define PG_LOG_LEVEL_INFO 3     ///< @brief Allows logs of level Info, Warning and Error.
-#define PG_LOG_LEVEL_WARNING 2  ///< @brief Allows logs of level Warning and Error.
-#define PG_LOG_LEVEL_ERROR 1    ///< @brief Allows logs of level Error.
-#define PG_LOG_LEVEL_NO_LOG 0   ///< @brief Doesn't allow any logs.
+#define SHRN_LOG_LEVEL_INFO 3     ///< @brief Allows logs of level Info, Warning and Error.
+#define SHRN_LOG_LEVEL_WARNING 2  ///< @brief Allows logs of level Warning and Error.
+#define SHRN_LOG_LEVEL_ERROR 1    ///< @brief Allows logs of level Error.
+#define SHRN_LOG_LEVEL_NO_LOG 0   ///< @brief Doesn't allow any logs.
 
 /**
  * @}

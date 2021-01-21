@@ -10,12 +10,6 @@
     <includedby refid="Logger_8hpp" local="yes">src/Logger.hpp</includedby>
     <includedby refid="StringFormat_8cpp" local="yes">src/StringFormat.cpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>iomanip</label>
-      </node>
-      <node id="5">
-        <label>string</label>
-      </node>
       <node id="1">
         <label>src/StringFormat.hpp</label>
         <link refid="StringFormat_8hpp"/>
@@ -30,6 +24,12 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
+      <node id="2">
+        <label>iomanip</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
       <node id="6">
         <label>vector</label>
       </node>
@@ -41,12 +41,6 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>src/Logger.hpp</label>
-        <link refid="Logger_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
       <node id="1">
         <label>src/StringFormat.hpp</label>
         <link refid="StringFormat_8hpp"/>
@@ -55,13 +49,19 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>src/Logger.cpp</label>
-        <link refid="Logger_8cpp"/>
-      </node>
       <node id="4">
         <label>src/StringFormat.cpp</label>
         <link refid="StringFormat_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/Logger.hpp</label>
+        <link refid="Logger_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/Logger.cpp</label>
+        <link refid="Logger_8cpp"/>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespaceShroon">Shroon</innernamespace>

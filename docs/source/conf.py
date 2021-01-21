@@ -63,7 +63,7 @@ html_theme_options = {
     'logo_only': False
 }
 
-html_logo = '../../logos/PergrineCPPLogger256x256.png'
+html_logo = '../../logos/ShroonCPPLogger256x256.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

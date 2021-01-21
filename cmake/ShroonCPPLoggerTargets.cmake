@@ -45,14 +45,14 @@ unset(_expectedTargets)
 add_library(ShroonCPPLogger::ShroonCPPLogger STATIC IMPORTED)
 
 set_target_properties(ShroonCPPLogger::ShroonCPPLogger PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/saroj/workspace/PeregrineCPPLogger/src/"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/saroj/workspace/ShroonCPPLogger/src/"
 )
 
 # Import target "ShroonCPPLogger::ShroonCPPLogger" for configuration "Release"
 set_property(TARGET ShroonCPPLogger::ShroonCPPLogger APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(ShroonCPPLogger::ShroonCPPLogger PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/home/saroj/workspace/PeregrineCPPLogger/build/lib/Release/libShroonCPPLogger.a"
+  IMPORTED_LOCATION_RELEASE "/home/saroj/workspace/ShroonCPPLogger/build/lib/Release/libShroonCPPLogger.a"
   )
 
 # This file does not depend on other imported targets which have

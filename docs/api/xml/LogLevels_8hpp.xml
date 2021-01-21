@@ -10,15 +10,15 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>src/Logger.cpp</label>
-        <link refid="Logger_8cpp"/>
-      </node>
       <node id="1">
         <label>src/LogLevels.hpp</label>
         <link refid="LogLevels_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>src/Logger.cpp</label>
+        <link refid="Logger_8cpp"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">

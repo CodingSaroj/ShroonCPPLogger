@@ -1,4 +1,0 @@
-Logging Functions
-=================
-
-.. doxygengroup:: LoggingFunctions
